@@ -4,62 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>News & Updates - CAVITRD</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f1f7ff;
+    <style>
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .menu-toggle span {
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+    width: 25px;
+  }
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
     }
-    nav {
+    nav ul {
+      display: none;
+      flex-direction: column;
       background-color: #0c4a6e;
-      padding: 10px;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+    }
+    nav ul.active {
+      display: flex;
+    }
+    nav ul li {
+      margin: 10px 0;
       text-align: center;
     }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    }
-    h1 {
-      text-align: center;
-      color: #0c4a6e;
-    }
-    .update {
-      margin-bottom: 25px;
-      border-left: 4px solid #0c4a6e;
-      padding-left: 15px;
-    }
-    .update h2 {
-      color: #0c4a6e;
-      margin-bottom: 5px;
-    }
-    .update p {
-      margin: 0;
-      color: #444;
-    }
+  }
+</style>
+<script>
+  function toggleMenu() {
+    document.querySelector('nav ul').classList.toggle('active');
+  }
+</script>
   </style>
 </head>
 <body>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="team.html">Our Team</a>
-    <a href="projects.html">What We Do</a>
-    <a href="news.html">News</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <div class="container">
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="projects.html">Our Work</a></li>
+    <li><a href="team.html">Our Team</a></li>
+    <li><a href="news.html" class="active">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="get-involved.html" class="donate-button">Get Involved</a></li>
+  </ul>
+</nav>
+ <div class="container">
     <h1>News & Updates</h1>
 
     <div class="update">
