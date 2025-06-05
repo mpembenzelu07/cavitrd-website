@@ -13,9 +13,13 @@ body {
 }
 
 /* Navigation */
+/* Navigation */
 nav {
   background-color: #0c4a6e;
   padding: 1em 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav ul {
@@ -23,16 +27,25 @@ nav ul {
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0 12px;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #14587f;
 }
 
 .donate-button {
