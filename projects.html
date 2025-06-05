@@ -5,56 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>What We Do - CAVITRD</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f1f7ff;
-      margin: 0;
-      padding: 0;
+  <style>
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .menu-toggle span {
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+    width: 25px;
+  }
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
     }
-    nav {
+    nav ul {
+      display: none;
+      flex-direction: column;
       background-color: #0c4a6e;
-      padding: 10px;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+    }
+    nav ul.active {
+      display: flex;
+    }
+    nav ul li {
+      margin: 10px 0;
       text-align: center;
     }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    }
-    h1 {
-      color: #0c4a6e;
-      text-align: center;
-    }
-    .project {
-      margin-bottom: 25px;
-    }
-    .project h2 {
-      color: #0c4a6e;
-      margin-bottom: 5px;
-    }
-    .project p {
-      color: #333;
-      line-height: 1.5;
-    }
+  }
+</style>
+<script>
+  function toggleMenu() {
+    document.querySelector('nav ul').classList.toggle('active');
+  }
+</script>
+    
   </style>
 </head>
 <body>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="team.html">Our Team</a>
-    <a href="projects.html">What We Do</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="projects.html" class="active">Our Work</a></li>
+    <li><a href="team.html">Our Team</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="get-involved.html" class="donate-button">Get Involved</a></li>
+  </ul>
+</nav>
 
   <div class="container">
     <h1>What We Do</h1>
