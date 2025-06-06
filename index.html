@@ -61,6 +61,40 @@
         text-align: center;
       }
     }
+  .hero {
+    background-image: url('https://images.unsplash.com/photo-1584467735871-456a04e0a91d?fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .hero-overlay {
+    text-align: center;
+    color: white;
+    background-color: rgba(12, 74, 110, 0.65);
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 90%;
+  }
+
+  .hero-button {
+    background-color: white;
+    color: #0c4a6e;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  .hero-button:hover {
+    background-color: #e2e8f0;
+  }
   </style>
   <script>
     function toggleMenu() {
@@ -69,6 +103,13 @@
   </script>
 </head>
 <body>
+  <section class="hero">
+  <div class="hero-overlay">
+    <h1>Empowering Children with Disabilities</h1>
+    <p>Transforming rural lives through inclusion, advocacy, and care.</p>
+    <a href="get-involved.html" class="hero-button">Get Involved</a>
+  </div>
+</section>
   <header>
     <nav>
       <div class="menu-toggle" onclick="toggleMenu()">
