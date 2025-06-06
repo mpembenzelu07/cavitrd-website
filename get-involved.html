@@ -3,10 +3,120 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Get Involved - CAVITRD</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" 
+href="styles.css" />
+
+  <style>
+  nav {
+    background-color: #0c4a6e;
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .menu-toggle span {
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+    width: 25px;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 0 12px;
+  }
+
+  nav ul li a {
+    color: white !important;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 14px;
+    display: block;
+  }
+
+  nav ul li a:hover {
+    background-color: #14587f;
+  }
+
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+    }
+
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: #0c4a6e;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+    }
+
+    nav ul.active {
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    nav ul li a {
+      color: white !important;
+    }
+  }
+</style>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('nav ul').classList.toggle('active');
+  }
+</script>
 </head>
 <body>
+  <!-- ✅ NAVIGATION BAR -->
   <nav>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="projects.html">Our Work</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="get-involved.html" class="active donate-button">Get Involved</a></li>
+    </ul>
+  </nav>
+
+  <!-- ✅ YOUR PAGE CONTENT STARTS HERE -->
+  <section class="container">
+    <h1 style="color:#0c4a6e;">Get Involved with CAVITRD</h1>
+    ...
+  </section>
+
+</body>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
