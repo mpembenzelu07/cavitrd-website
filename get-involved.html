@@ -3,140 +3,133 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Get Involved - CAVITRD</title>
-  <link rel="stylesheet" 
-href="styles.css" />
-
   <style>
-  nav {
-    background-color: #0c4a6e;
-    padding: 1em 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
-    padding: 10px;
-  }
-
-  .menu-toggle span {
-    height: 3px;
-    background: white;
-    margin: 4px 0;
-    width: 25px;
-  }
-
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  nav ul li {
-    margin: 0 12px;
-  }
-
-  nav ul li a {
-    color: white !important;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 8px 14px;
-    display: block;
-  }
-
-  nav ul li a:hover {
-    background-color: #14587f;
-  }
-
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: flex;
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f1f7ff;
     }
-
-    nav ul {
-      display: none;
-      flex-direction: column;
+    nav {
       background-color: #0c4a6e;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-    }
-
-    nav ul.active {
+      padding: 10px 20px;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
-
-    nav ul li {
-      margin: 10px 0;
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+    .logo {
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .menu {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .menu li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+      .menu.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    h1 {
       text-align: center;
+      color: #0c4a6e;
     }
-
-    nav ul li a {
-      color: white !important;
+    .section {
+      margin-bottom: 30px;
     }
-  }
-</style>
-
-<script>
-  function toggleMenu() {
-    document.querySelector('nav ul').classList.toggle('active');
-  }
-</script>
+    .section h2 {
+      color: #0c4a6e;
+      margin-bottom: 10px;
+    }
+    .section p {
+      color: #444;
+      font-size: 15px;
+    }
+    .footer {
+      background-color: #0c4a6e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .footer a {
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <!-- ✅ NAVIGATION BAR -->
   <nav>
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="logo">CAVITRD</div>
+    <ul class="menu">
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="projects.html">Our Work</a></li>
+      <li><a href="about.html">About</a></li>
       <li><a href="team.html">Our Team</a></li>
+      <li><a href="projects.html">What We Do</a></li>
       <li><a href="news.html">News</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="get-involved.html" class="active donate-button">Get Involved</a></li>
+      <li><a href="get-involved.html" class="active">Get Involved</a></li>
     </ul>
-  </nav>
-
-  <!-- ✅ YOUR PAGE CONTENT STARTS HERE -->
-  <section class="container">
-    <h1 style="text-align: center; color: #0c4a6e;">Get Involved with CAVITRD</h1>
-    <p style="text-align: center; max-width: 700px; margin: 0 auto; font-size: 16px;">You can play a vital role in helping children with disabilities in rural Tanzania. Whether you volunteer, donate supplies, partner with us, or spread awareness — your support makes a difference.</p><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px;">
-  <div class="member-card">
-    <h3>👩‍⚕️ Volunteer Your Skills</h3>
-    <p>Are you a health worker, physiotherapist, or educator? Join us in community outreach and training.</p>
-  </div>
-
-  <div class="member-card">
-    <h3>🎒 Donate Supplies</h3>
-    <p>Help children by donating assistive devices, hygiene items, school materials, or mobility equipment.</p>
-  </div>
-
-  <div class="member-card">
-    <h3>🤝 Become a Partner</h3>
-    <p>We collaborate with clinics, schools, and NGOs. Let’s work together to support inclusive transformation.</p>
-  </div>
-
-  <div class="member-card">
-    <h3>📢 Spread Awareness</h3>
-    <p>Follow and share our mission on social media. Help us make disabilities more visible in rural communities.</p>
-  </div>
+  </nav>  <div class="container">
+    <h1>Get Involved</h1><div class="section">
+  <h2>Become a Volunteer</h2>
+  <p>Join our field outreach activities, awareness campaigns, and caregiver training sessions. Volunteers are the heart of our work in rural communities.</p>
 </div>
 
-  </section>  <footer>
-    <p>&copy; 2025 CAVITRD. All rights reserved.</p>
-  </footer>
-</body>
+<div class="section">
+  <h2>Partner With Us</h2>
+  <p>We welcome partnerships with clinics, schools, community leaders, and NGOs. Together, we can create inclusive pathways for children and families with disabilities.</p>
+</div>
+
+<div class="section">
+  <h2>Support Us</h2>
+  <p>You can support CAVITRD by donating assistive devices, sponsoring outreach visits, or providing grants. Your contribution brings visibility and transformation to underserved families.</p>
+</div>
+
+<div class="section">
+  <h2>Contact Us</h2>
+  <p>Email: <a href="mailto:info@cavitrd.org">info@cavitrd.org</a><br>
+  Phone: +255 712 345 678</p>
+</div>
+
+  </div>  <div class="footer">
+    <p>&copy; 2024 CAVITRD | Mwanza, Tanzania | <a href="mailto:info@cavitrd.org">info@cavitrd.org</a></p>
+    <p><a href="https://x.com/CAVITRD">Follow us on X</a></p>
+  </div>  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.menu');
+      menu.classList.toggle('active');
+    }
+  </script></body>
 </html>
