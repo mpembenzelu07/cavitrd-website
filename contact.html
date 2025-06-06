@@ -4,6 +4,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us - CAVITRD</title>
   <style>
+    nav {
+  background-color: #0c4a6e;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  .menu.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
@@ -77,8 +125,12 @@
   <strong>Location</strong>
   <p>Mwanza, Lake Zone, Tanzania</p>
 </div>
-
-  </div>
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+  }
+</script>
 </body>
 </html>
   
