@@ -5,6 +5,16 @@
   <title>CAVITRD - Empowering Rural Inclusion</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
+    .fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
     .menu-toggle {
       display: none;
       flex-direction: column;
@@ -95,6 +105,24 @@
   .hero-button:hover {
     background-color: #e2e8f0;
   }
+    <script>
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  faders.forEach(fade => {
+    appearOnScroll.observe(fade);
+  });
+</script>
   </style>
   <script>
     function toggleMenu() {
@@ -120,16 +148,16 @@
       </ul>
   </nav>
 <section class="hero">
-  <div class="hero-overlay">
-    <h1>Inclusion. Dignity. Transformation.</h1>
-    <p>Supporting children and adults with disabilities in Tanzania's Lake Zone.</p>
-    <a href="get-involved.html" class="hero-button">Join Our Work</a>
+  <div class="hero-overlay fade-in">
+  <h1>Inclusion. Dignity. Transformation.</h1>
+  <p>Supporting children and adults with disabilities in Tanzania's Lake Zone.</p>
+  <a href="get-involved.html" class="hero-button">Join Our Work</a>
   </div>
 </section>
   <header>
     
   </header>  <section class="hero">
-    <div class="hero-content">
+    <div class="hero-overlay fade-in">
       <h1>Empowering Rural Children with Disabilities</h1>
       <p>Building inclusive communities through advocacy, support, and education.</p>
       <a href="get-involved.html" class="cta-button">Support Our Work</a>
