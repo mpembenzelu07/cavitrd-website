@@ -18,7 +18,7 @@
       align-items: center;
       flex-wrap: wrap;
     }
-    nav .menu {
+    .menu {
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
@@ -27,6 +27,19 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
+    }
+    .language-switch {
+      font-size: 14px;
+      color: white;
+    }
+    .language-switch a {
+      color: yellow;
+      text-decoration: none;
+      font-weight: normal;
+    }
+    .language-switch a.active {
+      font-weight: bold;
+      text-decoration: underline;
     }
     header {
       background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1588072432836-e10032774350') center/cover no-repeat;
@@ -86,10 +99,12 @@
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
+        align-items: flex-start;
       }
-      nav .menu {
+      .menu {
         flex-direction: column;
-        align-items: center;
+        width: 100%;
+        margin-bottom: 10px;
       }
       .hero-text h1 {
         font-size: 1.7rem;
@@ -110,7 +125,9 @@
       <a href="news.html">News</a>
       <a href="contact.html">Contact</a>
     </div>
-    <a href="index.swah" style="color: yellow;">Swahili</a>
+    <div class="language-switch">
+      <a href="index.html" class="active">EN</a> | <a href="index.swah">SW</a>
+    </div>
   </nav>  <header>
     <div class="hero-text">
       <h1>Empowering Children & Adults with Disabilities</h1>
