@@ -3,6 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>What We Do - CAVITRD</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       margin: 0;
@@ -17,111 +18,103 @@
       align-items: center;
       flex-wrap: wrap;
     }
-    .menu-toggle {
-      display: none;
-      font-size: 28px;
+    nav a {
       color: white;
-      cursor: pointer;
-    }
-    .logo {
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-    }
-    .menu {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .menu li a {
-      color: white;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
-    @media (max-width: 768px) {
-      .menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-      }
-      .menu.active {
-        display: flex;
-      }
-      .menu-toggle {
-        display: block;
-      }
-    }
     .container {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 40px auto;
-      padding: 0 20px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
     h1 {
+      color: #0c4a6e;
       text-align: center;
-      color: #0c4a6e;
-      margin-bottom: 30px;
     }
-    .service {
-      background-color: white;
-      padding: 25px;
-      margin-bottom: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    .activities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
     }
-    .service h2 {
-      color: #0c4a6e;
+    .activity {
+      background: #f7fbff;
+      border-radius: 10px;
+      padding: 15px;
+      flex: 1 1 30%;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .activity img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
       margin-bottom: 10px;
     }
-    .service p {
+    .activity h3 {
+      color: #0c4a6e;
+      margin-bottom: 8px;
+    }
+    .activity p {
+      font-size: 14px;
       color: #444;
-      font-size: 15px;
-      margin: 0;
+    }
+    @media (max-width: 768px) {
+      .activity {
+        flex: 1 1 100%;
+      }
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        margin: 8px 0;
+      }
     }
   </style>
 </head>
 <body>
   <nav>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <div class="logo">CAVITRD</div>
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="team.html">Our Team</a></li>
-      <li><a href="projects.html" class="active">What We Do</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="team.html">Our Team</a>
+    <a href="projects.html" class="active">What We Do</a>
+    <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
   </nav>  <div class="container">
-    <h1>What We Do</h1><div class="service">
-  <h2>Disability Awareness Campaigns</h2>
-  <p>We organize community-based awareness sessions to reduce stigma, educate caregivers, and promote early identification of congenital and acquired disabilities.</p>
-</div>
-
-<div class="service">
-  <h2>Assistive Device Distribution</h2>
-  <p>CAVITRD distributes essential assistive devices such as walkers, crutches, and wheelchairs to children and adults living with disabilities in underserved areas.</p>
-</div>
-
-<div class="service">
-  <h2>Medical Referral & Rehabilitation</h2>
-  <p>We connect children with medical specialists for surgeries, physical therapy, and follow-up care in partnership with local clinics and hospitals.</p>
-</div>
-
-<div class="service">
-  <h2>Caregiver Training & Support</h2>
-  <p>We empower parents and guardians through practical training in rehabilitation techniques and emotional support for caring for children with special needs.</p>
-</div>
-
-<div class="service">
-  <h2>Advocacy & Policy Engagement</h2>
-  <p>CAVITRD advocates for inclusive health and education policies by working with village leaders, schools, and government bodies across the Lake Zone region.</p>
-</div>
-
-  </div>  <script>
-    function toggleMenu() {
-      const menu = document.querySelector('.menu');
-      menu.classList.toggle('active');
-    }
-  </script></body>
+    <h1>What We Do</h1>
+    <div class="activities">
+      <div class="activity">
+        <img src="https://images.unsplash.com/photo-1576765607924-bb13f021d5fa?crop=entropy&cs=tinysrgb&fit=max&h=400&q=80&w=600" alt="Awareness Campaigns">
+        <h3>Awareness Campaigns</h3>
+        <p>We conduct outreach and community workshops to reduce stigma and raise awareness on disability inclusion.</p>
+      </div>
+      <div class="activity">
+        <img src="https://images.unsplash.com/photo-1594824476967-cf2c6d4ac6de?crop=entropy&cs=tinysrgb&fit=max&h=400&q=80&w=600" alt="Assistive Devices">
+        <h3>Assistive Devices</h3>
+        <p>We distribute wheelchairs, walkers, crutches, and other devices to children and adults in need.</p>
+      </div>
+      <div class="activity">
+        <img src="https://images.unsplash.com/photo-1578496479763-6e021c5e4e8a?crop=entropy&cs=tinysrgb&fit=max&h=400&q=80&w=600" alt="Medical Support">
+        <h3>Medical Support</h3>
+        <p>We connect families with rehabilitation, physiotherapy, surgery, and clinical referrals for disability care.</p>
+      </div>
+      <div class="activity">
+        <img src="https://images.unsplash.com/photo-1601979031925-012d64d6b270?crop=entropy&cs=tinysrgb&fit=max&h=400&q=80&w=600" alt="Caregiver Training">
+        <h3>Caregiver Training</h3>
+        <p>We empower parents, caregivers, and health workers with training on inclusive care and home-based therapy.</p>
+      </div>
+      <div class="activity">
+        <img src="https://images.unsplash.com/photo-1616440231799-bf02dcafe5b3?crop=entropy&cs=tinysrgb&fit=max&h=400&q=80&w=600" alt="Advocacy">
+        <h3>Advocacy & Inclusion</h3>
+        <p>We work with leaders and institutions to push for inclusive policies in education, health, and community planning.</p>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
