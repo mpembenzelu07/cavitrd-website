@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="sw">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mawasiliano - CAVITRD</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f1f7ff;
+    }
+    nav {
+      background-color: #0c4a6e;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    nav .menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .language-switch a {
+      color: yellow;
+      text-decoration: none;
+    }
+    .language-switch a.active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #0c4a6e;
+    }
+    .contact-info {
+      text-align: center;
+      font-size: 16px;
+      color: #333;
+      margin-top: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      margin-top: 30px;
+    }
+    footer {
+      background-color: #0c4a6e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    footer a {
+      color: yellow;
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+      nav .menu {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="menu">
+      <a href="index-sw.html">Mwanzo</a>
+      <a href="about-sw.html">Kuhusu Sisi</a>
+      <a href="team-sw.html">Timu Yetu</a>
+      <a href="projects-sw.html">Tunachofanya</a>
+      <a href="news-sw.html">Habari</a>
+      <a href="contact-sw.html" class="active">Mawasiliano</a>
+    </div>
+    <div class="language-switch">
+      <a href="contact.html">EN</a> | <a href="contact-sw.html" class="active">SW</a>
+    </div>
+  </nav>  <div class="container">
+    <h1>Wasiliana Nasi</h1>
+    <div class="contact-info">
+      <p>Una swali au unahitaji msaada? Tafadhali tumia fomu hapa chini au wasiliana nasi moja kwa moja:</p>
+      <p><strong>Anuani ya barua pepe:</strong> <a href="mailto:info@cavitrd.org">info@cavitrd.org</a></p>
+    </div><iframe aria-label='Fomu ya Mawasiliano' frameborder="0" src='https://forms.zohopublic.com/infocav1/form/NewsletterSignup/formperma/0yIiZTJj66LkVrglBEpa5t6oLMmS5Y0wKPs8LzjyuGU'></iframe>
+
+  </div>  <footer>
+    <p>&copy; 2024 CAVITRD | Mwanza, Tanzania | <a href="mailto:info@cavitrd.org">info@cavitrd.org</a></p>
+  </footer>
+</body>
+</html>
