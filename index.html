@@ -2,222 +2,192 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome - CAVITRD</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cavitrd - Innovate Your World</title>
   <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f1f7ff;
-    }
-
-    nav {
-      background-color: #0c4a6e;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .menu {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .language-switch a {
-      color: yellow;
-      text-decoration: none;
-    }
-
-    .language-switch a.active {
-      font-weight: bold;
-      text-decoration: underline;
-    }
-
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 300px;
-      overflow: hidden;
-    }
-
-    .hero img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .hero-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-    }
-
-    .hero-text h1 {
-      font-size: 36px;
-      margin: 0;
-    }
-
-    .hero-text p {
-      font-size: 18px;
-      margin-top: 10px;
-    }
-
-    .impact-stats {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      text-align: center;
-      padding: 40px 20px;
-      background-color: #eaf4fc;
-    }
-
-    .stat {
-      flex: 1 1 200px;
-      margin: 10px;
-    }
-
-    .stat .icon {
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
-
-    .stat h3 {
-      color: #0c4a6e;
-      font-size: 28px;
-      margin: 0;
-    }
-
-    .stat p {
-      color: #444;
-      font-size: 14px;
-      margin-top: 5px;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.05);
-    }
-
-    section {
-      margin-bottom: 30px;
-    }
-
-    section h2 {
-      color: #0c4a6e;
-    }
-
-    p, li {
-      font-size: 15px;
+      background: #f9f9f9;
       color: #333;
       line-height: 1.6;
     }
 
-    footer {
-      background-color: #0c4a6e;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+    a {
+      color: #0077ff;
+      text-decoration: none;
     }
 
-    footer a {
-      color: yellow;
+    a:hover {
       text-decoration: underline;
     }
 
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-      }
+    header {
+      background: #0077ff;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-      .menu {
-        flex-direction: column;
-        width: 100%;
-        align-items: flex-start;
-      }
+    header h1 {
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+    }
 
-      .impact-stats {
-        flex-direction: column;
-        align-items: center;
-      }
+    nav a {
+      margin-left: 1.5rem;
+      font-weight: 600;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0077ff 0%, #00d4ff 100%);
+      color: white;
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #0077ff;
+      padding: 0.75rem 2rem;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: #e6e6e6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .about, .features {
+      margin-bottom: 4rem;
+    }
+
+    .about h3, .features h3 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #0077ff;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      text-align: center;
+      color: #555;
+    }
+
+    .features-list {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .feature-item {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgb(0 0 0 / 0.05);
+      flex: 1 1 250px;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .feature-item h4 {
+      color: #0077ff;
+      margin-bottom: 0.75rem;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <div class="menu">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="team.html">Our Team</a>
-      <a href="projects.html">What We Do</a>
-      <a href="news.html">News</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="language-switch">
-      <a href="index.html" class="active">EN</a> | <a href="index-sw.html">SW</a>
-    </div>
-  </nav>
 
-  <div class="hero">
-    <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1350&q=80" alt="Children Banner">
-    <div class="hero-text">
-      <h1>Welcome to CAVITRD</h1>
-      <p>Empowering children and adults with disabilities in rural Tanzania</p>
-    </div>
-  </div>
+  <header>
+    <h1>Cavitrd</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <section class="impact-stats">
-    <div class="stat">
-      <div class="icon">👶</div>
-      <h3>20+</h3>
-      <p>Children Supported</p>
-    </div>
-    <div class="stat">
-      <div class="icon">♿</div>
-      <h3>4</h3>
-      <p>Mobility Aids Delivered</p>
-    </div>
-    <div class="stat">
-      <div class="icon">🏥</div>
-      <h3>2</h3>
-      <p>Clinical Partnerships</p>
+  <section class="hero">
+    <h2>Innovate Your World with Cavitrd</h2>
+    <p>Building smarter solutions that empower your business and simplify everyday life.</p>
+    <button class="btn-primary">Get Started</button>
+  </section>
+
+  <section class="container about" id="about">
+    <h3>About Cavitrd</h3>
+    <p>
+      Cavitrd is dedicated to delivering innovative technology solutions tailored to your needs.  
+      We combine cutting-edge design with practical functionality to help you achieve more.
+    </p>
+  </section>
+
+  <section class="container features" id="features">
+    <h3>Our Features</h3>
+    <div class="features-list">
+      <div class="feature-item">
+        <h4>Custom Solutions</h4>
+        <p>Tailored technology built specifically for your business goals.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Reliable Support</h4>
+        <p>Our team is here to help you every step of the way with expert guidance.</p>
+      </div>
+      <div class="feature-item">
+        <h4>Scalable Growth</h4>
+        <p>Grow confidently with solutions designed to evolve as your needs change.</p>
+      </div>
     </div>
   </section>
 
-  <div class="container">
-    <section>
-      <h2>What We Do</h2>
-      <p>We provide access to surgical treatment, mobility aids, and inclusive education support for children with congenital or trauma-related disabilities. Our team works across the Lake Zone region of Tanzania, building partnerships with clinics, caregivers, and local leaders to reduce stigma and improve access to care.</p>
-    </section>
-
-    <section>
-      <h2>Contact Us</h2>
-      <p>For collaboration, support, or inquiries: <a href="mailto:info@cavitrd.org">info@cavitrd.org</a></p>
-    </section>
-  </div>
-
-  <footer>
-    <p>&copy; 2024 CAVITRD | Mwanza, Tanzania | <a href="mailto:info@cavitrd.org">info@cavitrd.org</a></p>
+  <footer id="contact">
+    <p>© 2025 Cavitrd. All rights reserved. | Contact us at <a href="mailto:info@cavitrd.com">info@cavitrd.com</a></p>
   </footer>
+
 </body>
 </html>
