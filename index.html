@@ -17,60 +17,25 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      position: sticky;
-      top: 0;
-      z-index: 999;
     }
-    .menu-toggle {
-      display: none;
-      font-size: 28px;
-      color: white;
-      cursor: pointer;
-    }
-    .logo {
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-    }
-    .menu {
-      list-style: none;
+    nav .menu {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 15px;
     }
-    .menu li a {
+    nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
     }
-    .menu li a.cta {
-      background: white;
-      color: #0c4a6e;
-      padding: 6px 14px;
-      border-radius: 20px;
-    }
-    @media (max-width: 768px) {
-      .menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-      }
-      .menu.active {
-        display: flex;
-      }
-      .menu-toggle {
-        display: block;
-      }
-    }
-    .hero {
-      height: 90vh;
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-                  url('https://images.unsplash.com/photo-1588072432836-e10032774350') center/cover no-repeat;
+    header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1588072432836-e10032774350') center/cover no-repeat;
+      height: 85vh;
+      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: white;
     }
     .hero-text {
       max-width: 800px;
@@ -78,246 +43,92 @@
     }
     .hero-text h1 {
       font-size: 2.5rem;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
     .hero-text p {
       font-size: 1.2rem;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
     .hero-btn {
       background-color: #ffffff;
       color: #0c4a6e;
-      padding: 12px 28px;
+      padding: 10px 24px;
       font-weight: bold;
       text-decoration: none;
       border-radius: 30px;
-      transition: background 0.3s;
-    }
-    .hero-btn:hover {
-      background-color: #d4e4f7;
-    }
-    .stats {
-      display: flex;
-      justify-content: space-around;
-      background: #e6f1fb;
-      padding: 40px 20px;
-      text-align: center;
-      flex-wrap: wrap;
-    }
-    .stat {
-      margin: 10px 20px;
-      transition: transform 0.3s ease-in-out;
-    }
-    .stat:hover {
-      transform: translateY(-5px);
-    }
-    .stat i {
-      font-size: 2.2rem;
-      color: #0c4a6e;
-      margin-bottom: 10px;
-    }
-    .stat h3 {
-      color: #0c4a6e;
-      font-size: 2rem;
-      margin-bottom: 5px;
-    }
-    .stat p {
-      font-size: 14px;
-      color: #444;
     }
     .container {
-      max-width: 1000px;
+      max-width: 960px;
       margin: 40px auto;
-      padding: 0 20px;
-    }
-    .section {
-      background-color: white;
-      padding: 25px;
-      margin-bottom: 30px;
+      padding: 20px;
+      background: white;
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
     }
-    .section h2 {
+    h2 {
       color: #0c4a6e;
-      margin-bottom: 10px;
     }
-    .section p {
-      color: #444;
+    p {
       font-size: 15px;
+      color: #444;
     }
-    .signup {
-      background-color: #dceeff;
-      padding: 30px;
-      text-align: center;
-      border-radius: 12px;
-      margin: 40px 20px;
-    }
-    .signup h2 {
-      color: #0c4a6e;
-      margin-bottom: 10px;
-    }
-    .footer {
+    footer {
       background-color: #0c4a6e;
       color: white;
       text-align: center;
-      padding: 30px 20px;
+      padding: 20px;
+      margin-top: 40px;
     }
-    .footer a {
-      color: white;
+    footer a {
+      color: yellow;
       text-decoration: underline;
     }
-    .donate-btn {
-      display: inline-block;
-      margin-top: 20px;
-      background-color: #ffcc00;
-      color: #0c4a6e;
-      padding: 12px 28px;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 30px;
-      transition: background 0.3s ease;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-    }
-    .donate-btn:hover {
-      background-color: #ffdb4d;
-    }
     @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+      nav .menu {
+        flex-direction: column;
+        align-items: center;
+      }
       .hero-text h1 {
         font-size: 1.7rem;
       }
       .hero-text p {
         font-size: 1rem;
       }
-      .hero-btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-      }
-      .section h2 {
-        font-size: 1.4rem;
-      }
-      .section p, .stat p {
-        font-size: 0.95rem;
-      }
-      .stat i {
-        font-size: 1.5rem;
-      }
-      .menu li a {
-        padding: 10px 0;
-        font-size: 1rem;
-      }
-      .signup h2 {
-        font-size: 1.2rem;
-      }
-      .donate-btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-      }
-      .container {
-        padding: 0 10px;
-      }
-      .section {
-        padding: 15px;
-      }
-      .stats {
-        flex-direction: column;
-        gap: 20px;
-      }
     }
   </style>
 </head>
 <body>
   <nav>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <div class="logo">CAVITRD</div>
-    <ul class="menu">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="team.html">Our Team</a></li>
-      <li><a href="projects.html">What We Do</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="get-involved.html" class="cta">Get Involved</a></li>
-    </ul>
-  </nav>  <header class="hero">
+    <div class="menu">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="team.html">Our Team</a>
+      <a href="projects.html">What We Do</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="index.swah" style="color: yellow;">Swahili</a>
+  </nav>  <header>
     <div class="hero-text">
       <h1>Empowering Children & Adults with Disabilities</h1>
       <p>We serve rural Tanzania through inclusive care, advocacy, and visibility. Join our mission to reduce stigma and build equity.</p>
       <a href="get-involved.html" class="hero-btn">Get Involved</a>
     </div>
-  </header>  <section class="stats">
-    <div class="stat">
-      <i class="fas fa-child"></i>
-      <h3>100+</h3>
-      <p>Children Reached</p>
-    </div>
-    <div class="stat">
-      <i class="fas fa-wheelchair"></i>
-      <h3>20+</h3>
-      <p>Assistive Devices Delivered</p>
-    </div>
-    <div class="stat">
-      <i class="fas fa-map-marker-alt"></i>
-      <h3>5</h3>
-      <p>Communities Served</p>
-    </div>
-    <div class="stat">
-      <i class="fas fa-hands-helping"></i>
-      <h3>10+</h3>
-      <p>Volunteers Involved</p>
-    </div>
-  </section>  <div class="container">
-    <div class="section">
-      <h2>Our Mission</h2>
-      <p>To promote inclusive and equitable support systems for children with disabilities in underserved rural areas through education, advocacy, healthcare access, and community engagement.</p>
-    </div><div class="section">
-  <h2>What We Do</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between;">
-    <div style="flex: 1 1 30%; background-color: #f7fbff; padding: 15px; border-radius: 10px; text-align: center;">
-      <img src="https://images.unsplash.com/photo-1576765607924-bb13f021d5fa?crop=entropy&cs=tinysrgb&fit=max&h=400&q=80&w=600" 
-           alt="Awareness Campaign" style="width:100%; height:150px; object-fit:cover; border-radius: 8px;">
-      <h3 style="color:#0c4a6e;">Awareness Campaigns</h3>
-      <p style="font-size: 14px;">Community workshops and events to reduce stigma and promote inclusion of children with disabilities.</p>
-    </div>
+  </header>  <div class="container">
+    <h2>About CAVITRD</h2>
+    <p><strong>CAVITRD</strong> is short for a registered Tanzanian NGO with Registration number <strong>14NGO/R/4896</strong>, dealing with children and adults with congenital or acquired anomalies, vision impairment, and trauma-related disabilities.</p><h2>Our Goals</h2>
+<p>To improve access to assistive devices, medical care, education, and community-based awareness in underserved rural areas.</p>
 
-    <div style="flex: 1 1 30%; background-color: #f7fbff; padding: 15px; border-radius: 10px; text-align: center;">
-      <img src="https://images.unsplash.com/photo-1594824476967-cf2c6d4ac6de?crop=entropy&cs=tinysrgb&fit=max&h=400&q=80&w=600"
-           alt="Assistive Devices" style="width:100%; height:150px; object-fit:cover; border-radius: 8px;">
-      <h3 style="color:#0c4a6e;">Assistive Devices</h3>
-      <p style="font-size: 14px;">Distribution of wheelchairs, walkers, and crutches to children in need.</p>
-    </div>
+<h2>News & Impact</h2>
+<p>See how we’re making a difference through seminars, partnerships, and device distribution efforts.</p>
+<p><a href="news.html">Read More →</a></p>
 
-    <div style="flex: 1 1 30%; background-color: #f7fbff; padding: 15px; border-radius: 10px; text-align: center;">
-      <img src="https://images.unsplash.com/photo-1578496479763-6e021c5e4e8a?crop=entropy&cs=tinysrgb&fit=max&h=400&q=80&w=600"
-           alt="Medical Support" style="width:100%; height:150px; object-fit:cover; border-radius: 8px;">
-      <h3 style="color:#0c4a6e;">Medical Access</h3>
-      <p style="font-size: 14px;">Connecting families to medical care, physiotherapy, and surgical referrals.</p>
-    </div>
-  </div>
-</div>
-
-<div class="section">
-  <h2>Meet Our Team</h2>
-  <p>Our team includes local caregivers, health professionals, educators, and advocates working together to support children and families in the Lake Zone region.</p>
-  <p><a href="team.html">Learn more about our team →</a></p>
-</div>
-
-<div class="section">
-  <h2>Recent News</h2>
-  <p>From outreach in Ilemela to seminars in Buswelu, see how we're making a difference.</p>
-  <p><a href="news.html">Read our updates →</a></p>
-</div>
-
-  </div>  <div class="signup">
-    <h2>Join Our Newsletter</h2>
-    <iframe aria-label='Newsletter Signup' frameborder="0" style="height:500px;width:99%;border:none;" src='https://forms.zohopublic.com/infocav1/form/NewsletterSignup/formperma/0yIiZTJj66LkVrglBEpa5t6oLMmS5Y0wKPs8LzjyuGU'></iframe>
-  </div>  <div class="footer">
+  </div>  <footer>
     <p>&copy; 2024 CAVITRD | Mwanza, Tanzania | <a href="mailto:info@cavitrd.org">info@cavitrd.org</a></p>
-    <p><a href="https://x.com/CAVITRD">Follow us on X</a></p>
-    <a class="donate-btn" href="#" target="_blank">Support Our Work</a>
-  </div>  <script>
-    function toggleMenu() {
-      const menu = document.querySelector('.menu');
-      menu.classList.toggle('active');
-    }
-  </script></body>
+    <p><a href="index.swah">Switch to Swahili</a></p>
+  </footer>
+</body>
 </html>
