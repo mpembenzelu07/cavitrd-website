@@ -1,13 +1,13 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us - </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - CAVITRD</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #f1f7ff;
     }
     nav {
@@ -18,43 +18,14 @@
       align-items: center;
       flex-wrap: wrap;
     }
-    .menu-toggle {
-      display: none;
-      font-size: 28px;
+    nav a {
       color: white;
-      cursor: pointer;
-    }
-    .logo {
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-    }
-    .menu {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .menu li a {
-      color: white;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
-    @media (max-width: 768px) {
-      .menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-      }
-      .menu.active {
-        display: flex;
-      }
-      .menu-toggle {
-        display: block;
-      }
-    }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 20px;
       background: white;
@@ -64,57 +35,74 @@
     h1 {
       text-align: center;
       color: #0c4a6e;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
-    .contact-details {
-      color: #333;
-      font-size: 16px;
-      line-height: 1.7;
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
     }
-    .contact-details strong {
+    .info div {
+      flex: 1 1 45%;
+    }
+    .info h2 {
       color: #0c4a6e;
-      display: block;
-      margin-top: 20px;
-      font-size: 17px;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
     }
-    .contact-details a {
-      color: #0c4a6e;
-      text-decoration: none;
+    .info p {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.6;
     }
-    .contact-details a:hover {
-      text-decoration: underline;
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      margin-top: 30px;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        margin: 8px 0;
+      }
+      .info div {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
 <body>
   <nav>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <div class="logo">CAVITRD</div>
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="team.html">Our Team</a></li>
-      <li><a href="projects.html">What We Do</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="team.html">Our Team</a>
+    <a href="projects.html">What We Do</a>
+    <a href="news.html">News</a>
+    <a href="contact.html" class="active">Contact</a>
   </nav>  <div class="container">
     <h1>Contact Us</h1>
-    <div class="contact-details">
-      <p>We’d love to hear from you. Reach out via the details below and we’ll respond as soon as possible.</p><strong>Email</strong>
-  <p><a href="mailto:info@cavitrd.org">info@cavitrd.org</a></p>
+    <div class="info">
+      <div>
+        <h2>Email</h2>
+        <p><a href="mailto:info@cavitrd.org">info@cavitrd.org</a></p><h2>Phone</h2>
+    <p>+255 718 851139 </p>
 
-  <strong>Phone</strong>
-  <p>+255 718 851139 +255 742 160829</p>
+    <h2>Office Address</h2>
+    <p>Mwanza, Tanzania<br>Lake Zone Region</p>
 
-  <strong>Location</strong>
-  <p>Mwanza, Lake Zone, Tanzania</p>
+    <h2>Follow Us</h2>
+    <p><a href="https://x.com/CAVITRD" target="_blank">X (Twitter)</a></p>
+  </div>
+  <div>
+    <h2>Send Us a Message</h2>
+    <iframe aria-label='Contact Form' frameborder="0" src="https://forms.zohopublic.com/infocav1/form/ContactUs/formperma/Gv3T0O69tCD6FTcuZWdQXDJ9GM0fdIvPkhDki6U8UoI"></iframe>
+  </div>
 </div>
 
-  </div>  <script>
-    function toggleMenu() {
-      const menu = document.querySelector('.menu');
-      menu.classList.toggle('active');
-    }
-  </script></body>
+  </div>
+</body>
 </html>
