@@ -3,6 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>News & Updates - CAVITRD</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       margin: 0;
@@ -17,108 +18,82 @@
       align-items: center;
       flex-wrap: wrap;
     }
-    .menu-toggle {
-      display: none;
-      font-size: 28px;
+    nav a {
       color: white;
-      cursor: pointer;
-    }
-    .logo {
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-    }
-    .menu {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .menu li a {
-      color: white;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
-    @media (max-width: 768px) {
-      .menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-      }
-      .menu.active {
-        display: flex;
-      }
-      .menu-toggle {
-        display: block;
-      }
-    }
     .container {
-      max-width: 1000px;
+      max-width: 900px;
       margin: 40px auto;
-      padding: 0 20px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
     h1 {
       text-align: center;
       color: #0c4a6e;
       margin-bottom: 30px;
     }
-    .news-item {
-      background-color: white;
-      padding: 25px;
-      margin-bottom: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    .update {
+      margin-bottom: 40px;
+      border-left: 4px solid #0c4a6e;
+      padding-left: 15px;
     }
-    .news-item h2 {
+    .update h2 {
       color: #0c4a6e;
-      margin-bottom: 10px;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
     }
-    .news-item p {
+    .update p {
       color: #444;
       font-size: 15px;
+      line-height: 1.6;
     }
-    .news-date {
-      font-size: 13px;
-      color: #888;
+    .update small {
+      color: #777;
+      display: block;
       margin-bottom: 10px;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        margin: 8px 0;
+      }
     }
   </style>
 </head>
 <body>
   <nav>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <div class="logo">CAVITRD</div>
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="team.html">Our Team</a></li>
-      <li><a href="projects.html">What We Do</a></li>
-      <li><a href="news.html" class="active">News</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="team.html">Our Team</a>
+    <a href="projects.html">What We Do</a>
+    <a href="news.html" class="active">News</a>
+    <a href="contact.html">Contact</a>
   </nav>  <div class="container">
-    <h1>Latest News & Updates</h1><div class="news-item">
-  <div class="news-date">📍 May 2025</div>
-  <h2>Community Outreach – Ilemela District</h2>
-  <p>In May 2025, the CAVITRD team conducted a targeted outreach in Ilemela District. We reached over <strong>20 children</strong> living with mobility-related disabilities, delivering <strong>4 walkers, 2 crutches</strong>, and <strong>2 wheelchairs</strong>. Caregivers received on-the-spot training in basic rehabilitation. The community’s response was overwhelmingly positive, helping reduce stigma and build inclusion.</p>
+    <h1>News & Updates</h1><div class="update">
+  <small>📍 May 2025 – Ilemela Outreach</small>
+  <h2>Inclusive Outreach for Children with Disabilities</h2>
+  <p>In May, our team reached 20+ children in Ilemela District living with mobility-related disabilities. We distributed 4 walkers, 2 crutches, and 2 wheelchairs. Caregivers were trained on using the devices, and local leaders pledged to continue inclusive support efforts.</p>
 </div>
 
-<div class="news-item">
-  <div class="news-date">🤝 April 2025</div>
-  <h2>Partnership with Mwanza Health Center</h2>
-  <p>We officially partnered with Mwanza Health Center to streamline referrals for children needing surgeries and physiotherapy. This includes <strong>joint evaluations, care coordination</strong>, and <strong>scheduled follow-ups</strong>. A caregiver who benefitted said, “Before, I didn’t know where to turn. Now my child has been seen by a doctor, and we feel hopeful.”</p>
+<div class="update">
+  <small>🤝 April 2025 – Mwanza Health Center</small>
+  <h2>New Partnership for Medical Referrals</h2>
+  <p>CAVITRD partnered with Mwanza Health Center to provide surgical referrals and physiotherapy for children in need. Together, we launched a coordinated care system with follow-up tracking and clinical evaluations for families.</p>
 </div>
 
-<div class="news-item">
-  <div class="news-date">📢 March 2025</div>
-  <h2>Awareness Seminar in Buswelu</h2>
-  <p>CAVITRD hosted an awareness seminar in Buswelu village, focusing on early detection of congenital conditions and inclusive support strategies. Over <strong>40 participants</strong> joined, including educators, village leaders, and health volunteers. Participants requested more sessions and committed to spreading awareness at school and community levels.</p>
+<div class="update">
+  <small>📢 March 2025 – Buswelu Village</small>
+  <h2>Community Seminar on Disability Awareness</h2>
+  <p>Our awareness seminar in Buswelu brought together 40+ participants including teachers, volunteers, and local leaders. We shared inclusive education strategies and promoted early detection of congenital conditions.</p>
 </div>
 
-  </div>  <script>
-    function toggleMenu() {
-      const menu = document.querySelector('.menu');
-      menu.classList.toggle('active');
-    }
-  </script></body>
+  </div>
+</body>
 </html>
