@@ -1,9 +1,10 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAVITRD - Home</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome - CAVITRD</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
     body {
       margin: 0;
@@ -28,47 +29,53 @@
       text-decoration: none;
       font-weight: bold;
     }
-    .language-switch {
-      font-size: 14px;
-      color: white;
-    }
     .language-switch a {
       color: yellow;
       text-decoration: none;
-      font-weight: normal;
     }
     .language-switch a.active {
       font-weight: bold;
       text-decoration: underline;
     }
-    header {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1588072432836-e10032774350') center/cover no-repeat;
-      height: 85vh;
+    .hero {
+      background-color: #0c4a6e;
       color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       text-align: center;
+      padding: 60px 20px;
     }
-    .hero-text {
-      max-width: 800px;
-      padding: 20px;
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 36px;
     }
-    .hero-text h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
+    .hero p {
+      font-size: 18px;
+      margin: 0;
     }
-    .hero-text p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
+    .impact-stats {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #eaf4fc;
     }
-    .hero-btn {
-      background-color: #ffffff;
+    .stat {
+      flex: 1 1 200px;
+      margin: 10px;
+    }
+    .stat .icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+    .stat h3 {
       color: #0c4a6e;
-      padding: 10px 24px;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 30px;
+      font-size: 28px;
+      margin: 0;
+    }
+    .stat p {
+      color: #444;
+      font-size: 14px;
+      margin-top: 5px;
     }
     .container {
       max-width: 960px;
@@ -78,12 +85,16 @@
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(0,0,0,0.05);
     }
-    h2 {
+    section {
+      margin-bottom: 30px;
+    }
+    section h2 {
       color: #0c4a6e;
     }
-    p {
+    p, li {
       font-size: 15px;
-      color: #444;
+      color: #333;
+      line-height: 1.6;
     }
     footer {
       background-color: #0c4a6e;
@@ -99,18 +110,15 @@
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
-        align-items: flex-start;
       }
       .menu {
         flex-direction: column;
         width: 100%;
-        margin-bottom: 10px;
+        align-items: flex-start;
       }
-      .hero-text h1 {
-        font-size: 1.7rem;
-      }
-      .hero-text p {
-        font-size: 1rem;
+      .impact-stats {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
@@ -128,22 +136,44 @@
     <div class="language-switch">
       <a href="index.html" class="active">EN</a> | <a href="index-sw.html">SW</a>
     </div>
-  </nav>  <header>
-    <div class="hero-text">
-      <h1>Empowering Children & Adults with Disabilities</h1>
-      <p>We serve rural Tanzania through inclusive care, advocacy, and visibility. Join our mission to reduce stigma and build equity.</p>
-      <a href="get-involved.html" class="hero-btn">Get Involved</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Welcome to CAVITRD</h1>
+    <p>Empowering children and adults with disabilities in rural Tanzania</p>
+  </div>
+
+  <section class="impact-stats">
+    <div class="stat">
+      <div class="icon">👶</div>
+      <h3>20+</h3>
+      <p>Children Supported</p>
     </div>
-  </header>  <div class="container">
-    <h2>About CAVITRD</h2>
-    <p><strong>CAVITRD</strong> is a Tanzanian NGO with Registration number <strong>14NGO/R/4896</strong>, dealing with children and adults with congenital or acquired anomalies, vision impairment, and trauma-related disabilities.</p><h2>Our Goals</h2>
-<p>To improve access to assistive devices, medical care, education, and community-based awareness in underserved rural areas.</p>
+    <div class="stat">
+      <div class="icon">♿</div>
+      <h3>4</h3>
+      <p>Mobility Aids Delivered</p>
+    </div>
+    <div class="stat">
+      <div class="icon">🏥</div>
+      <h3>2</h3>
+      <p>Clinical Partnerships</p>
+    </div>
+  </section>
 
-<h2>News & Impact</h2>
-<p>See how we’re making a difference through seminars, partnerships, and device distribution efforts.</p>
-<p><a href="news.html">Read More →</a></p>
+  <div class="container">
+    <section>
+      <h2>What We Do</h2>
+      <p>We provide access to surgical treatment, mobility aids, and inclusive education support for children with congenital or trauma-related disabilities. Our team works across the Lake Zone region of Tanzania, building partnerships with clinics, caregivers, and local leaders to reduce stigma and improve access to care.</p>
+    </section>
 
-  </div>  <footer>
+    <section>
+      <h2>Contact Us</h2>
+      <p>For collaboration, support, or inquiries: <a href="mailto:info@cavitrd.org">info@cavitrd.org</a></p>
+    </section>
+  </div>
+
+  <footer>
     <p>&copy; 2024 CAVITRD | Mwanza, Tanzania | <a href="mailto:info@cavitrd.org">info@cavitrd.org</a></p>
   </footer>
 </body>
