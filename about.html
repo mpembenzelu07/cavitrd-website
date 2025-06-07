@@ -1,14 +1,14 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us - CAVITRD</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #f1f7ff;
-      line-height: 1.6;
     }
     nav {
       background-color: #0c4a6e;
@@ -18,109 +18,82 @@
       align-items: center;
       flex-wrap: wrap;
     }
-    .menu-toggle {
-      display: none;
-      font-size: 28px;
+    nav a {
       color: white;
-      cursor: pointer;
-    }
-    .logo {
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-    }
-    .menu {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .menu li a {
-      color: white;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
-    @media (max-width: 768px) {
-      .menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-      }
-      .menu.active {
-        display: flex;
-      }
-      .menu-toggle {
-        display: block;
-      }
-    }
     .container {
-      max-width: 900px;
+      max-width: 960px;
       margin: 40px auto;
-      padding: 0 20px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
     h1, h2 {
       color: #0c4a6e;
+      margin-bottom: 10px;
     }
-    .section {
-      background: white;
-      padding: 30px;
-      margin-bottom: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    p, ul {
+      color: #444;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 15px;
+      }
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        margin: 8px 0;
+      }
     }
   </style>
 </head>
 <body>
   <nav>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <div class="logo">CAVITRD</div>
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="team.html">Our Team</a></li>
-      <li><a href="projects.html">What We Do</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="team.html">Our Team</a>
+    <a href="projects.html">What We Do</a>
+    <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
   </nav>  <div class="container">
-    <div class="section">
-      <h1>About CAVITRD</h1>
-      <p><strong>CAVITRD</strong> is the short form for "Centre for Advocacy and Visibility of Inclusive Transformation in Rural Disabilities." It is a registered Tanzanian NGO (Registration No. 14NGO/R/4896) that works with children and adults living with congenital or acquired anomalies, vision impairment, and trauma-related disabilities—primarily within the Lake Zone region.</p>
-    </div><div class="section">
-  <h2>Our Mission</h2>
-  <p>To promote inclusive and equitable support systems for children with disabilities in underserved rural areas through education, advocacy, healthcare access, and community engagement.</p>
-</div>
+    <h1>About Us</h1>
+    <p><strong>CAVITRD</strong> stands for <em>Centre for Advocacy and Visibility of Inclusive Transformation in Rural Disabilities</em>. We are a registered non-governmental organization in Tanzania under Reg. No. <strong>14NGO/R/4896</strong>.</p>
+    <p>We are committed to supporting <strong>children and adults</strong> living with <strong>congenital or acquired anomalies</strong>, <strong>vision impairments</strong>, and <strong>trauma-related disabilities</strong> across the <strong>Lake Zone</strong> region of Tanzania. Our work is grounded in inclusion, empowerment, and dignity for all.</p><h2>Our Mission</h2>
+<p>To promote inclusive and equitable support systems for people with disabilities in rural areas through education, advocacy, healthcare access, and community engagement.</p>
 
-<div class="section">
-  <h2>Our Objectives</h2>
-  <ul>
-    <li>Improve early detection and referral of children with disabilities.</li>
-    <li>Enhance access to assistive devices, medical care, and education.</li>
-    <li>Strengthen caregiver and community awareness and support.</li>
-    <li>Advocate for inclusive policies and practices in healthcare and education.</li>
-  </ul>
-</div>
+<h2>Our Vision</h2>
+<p>A society where every child and adult with disabilities is visible, valued, and fully included in all aspects of life.</p>
 
-<div class="section">
-  <h2>Our Values</h2>
-  <ul>
-    <li>Inclusion</li>
-    <li>Compassion</li>
-    <li>Equity</li>
-    <li>Collaboration</li>
-    <li>Respect</li>
-  </ul>
-</div>
+<h2>Our Objectives</h2>
+<ul>
+  <li>Support early detection and intervention for children with disabilities.</li>
+  <li>Provide access to assistive devices and essential medical care.</li>
+  <li>Raise awareness in communities and reduce stigma.</li>
+  <li>Build caregiver capacity through training and resources.</li>
+  <li>Advocate for inclusive public policies and programs.</li>
+</ul>
 
-<div class="section">
-  <h2>Our History</h2>
-  <p>CAVITRD began in Mwanza with a small group of passionate caregivers, health workers, and community leaders who noticed a gap in support for children with disabilities in rural areas. From early workshops in Buswelu to partnerships with clinics and health centers, CAVITRD’s journey is rooted in compassion and grassroots inclusion.</p>
-</div>
+<h2>Our Core Values</h2>
+<ul>
+  <li><strong>Inclusion:</strong> Every voice matters.</li>
+  <li><strong>Empowerment:</strong> We uplift children, families, and communities.</li>
+  <li><strong>Respect:</strong> We value dignity, empathy, and understanding.</li>
+  <li><strong>Accountability:</strong> We operate with transparency and integrity.</li>
+</ul>
 
-  </div>  <script>
-    function toggleMenu() {
-      const menu = document.querySelector('.menu');
-      menu.classList.toggle('active');
-    }
-  </script></body>
+<h2>Our History</h2>
+<p>CAVITRD began in Mwanza through grassroots efforts by a team of passionate individuals: caregivers, health workers, teachers, and community leaders. They noticed the gap in services for children living with disabilities in rural areas. From small local meetings to outreach campaigns and clinical referrals, our journey continues to grow — always grounded in compassion and visibility.</p>
+
+  </div>
+</body>
 </html>
