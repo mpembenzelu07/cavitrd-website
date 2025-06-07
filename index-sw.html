@@ -38,26 +38,44 @@
       text-decoration: underline;
     }
     .hero {
-      position: relative;
-      width: 100%;
-      height: 300px;
-      overflow: hidden;
-    }
-    .hero img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .hero-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      background-color: #0c4a6e;
       color: white;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      border-radius: 8px;
       text-align: center;
+      padding: 60px 20px;
+    }
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 36px;
+    }
+    .hero p {
+      font-size: 18px;
+      margin: 0;
+    }
+    .impact-stats {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #eaf4fc;
+    }
+    .stat {
+      flex: 1 1 200px;
+      margin: 10px;
+    }
+    .stat .icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+    .stat h3 {
+      color: #0c4a6e;
+      font-size: 28px;
+      margin: 0;
+    }
+    .stat p {
+      color: #444;
+      font-size: 14px;
+      margin-top: 5px;
     }
     .container {
       max-width: 960px;
@@ -98,6 +116,10 @@
         width: 100%;
         align-items: flex-start;
       }
+      .impact-stats {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
@@ -117,12 +139,27 @@
   </nav>
 
   <div class="hero">
-    <img src="img/children-banner.jpg" alt="Children banner" />
-    <div class="hero-text">
-      <h1>Karibu CAVITRD</h1>
-      <p>Kusaidia watoto na watu wazima wenye ulemavu vijijini</p>
-    </div>
+    <h1>Karibu CAVITRD</h1>
+    <p>Kusaidia watoto na watu wazima wenye ulemavu vijijini</p>
   </div>
+
+  <section class="impact-stats">
+    <div class="stat">
+      <div class="icon">👶</div>
+      <h3>20+</h3>
+      <p>Watoto waliopata msaada</p>
+    </div>
+    <div class="stat">
+      <div class="icon">♿</div>
+      <h3>4</h3>
+      <p>Vifaa vya msaada vilivyogawiwa</p>
+    </div>
+    <div class="stat">
+      <div class="icon">🏥</div>
+      <h3>2</h3>
+      <p>Ushirikiano na kliniki</p>
+    </div>
+  </section>
 
   <div class="container">
     <section>
