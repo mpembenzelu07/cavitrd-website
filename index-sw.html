@@ -37,21 +37,27 @@
       font-weight: bold;
       text-decoration: underline;
     }
-    header {
-      background: url('https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1200&h=400&q=80') no-repeat center center/cover;
+    .hero {
+      position: relative;
+      width: 100%;
       height: 300px;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      flex-direction: column;
+      overflow: hidden;
     }
-    header h1 {
-      font-size: 32px;
-      background-color: rgba(0,0,0,0.6);
-      padding: 10px 20px;
-      border-radius: 10px;
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
     }
     .container {
       max-width: 960px;
@@ -110,10 +116,13 @@
     </div>
   </nav>
 
-  <header>
-    <h1>Karibu CAVITRD</h1>
-    <p>Kusaidia watoto na watu wazima wenye ulemavu vijijini</p>
-  </header>
+  <div class="hero">
+    <img src="img/children-banner.jpg" alt="Children banner" />
+    <div class="hero-text">
+      <h1>Karibu CAVITRD</h1>
+      <p>Kusaidia watoto na watu wazima wenye ulemavu vijijini</p>
+    </div>
+  </div>
 
   <div class="container">
     <section>
