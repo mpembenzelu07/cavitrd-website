@@ -226,6 +226,98 @@
   </style>
 </head>
 <body>
-  <h1 style="text-align:center; margin-top:100px; color:#0c4a6e;">If you're seeing this, the homepage content is missing.<br>Please re-add the body content here.</h1>
-</body>
+  <nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="logo">CAVITRD</div>
+    <ul class="menu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="projects.html">What We Do</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="get-involved.html" class="cta">Get Involved</a></li>
+    </ul>
+  </nav>  <header class="hero">
+    <div class="hero-text">
+      <h1>Empowering Children & Adults with Disabilities</h1>
+      <p>We serve rural Tanzania through inclusive care, advocacy, and visibility. Join our mission to reduce stigma and build equity.</p>
+      <a href="get-involved.html" class="hero-btn">Get Involved</a>
+    </div>
+  </header>  <section class="stats">
+    <div class="stat">
+      <i class="fas fa-child"></i>
+      <h3>100+</h3>
+      <p>Children Reached</p>
+    </div>
+    <div class="stat">
+      <i class="fas fa-wheelchair"></i>
+      <h3>20+</h3>
+      <p>Assistive Devices Delivered</p>
+    </div>
+    <div class="stat">
+      <i class="fas fa-map-marker-alt"></i>
+      <h3>5</h3>
+      <p>Communities Served</p>
+    </div>
+    <div class="stat">
+      <i class="fas fa-hands-helping"></i>
+      <h3>10+</h3>
+      <p>Volunteers Involved</p>
+    </div>
+  </section>  <div class="container">
+    <div class="section">
+      <h2>Our Mission</h2>
+      <p>To promote inclusive and equitable support systems for children with disabilities in underserved rural areas through education, advocacy, healthcare access, and community engagement.</p>
+    </div><div class="section">
+  <h2>What We Do</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between;">
+    <div style="flex: 1 1 30%; background-color: #f7fbff; padding: 15px; border-radius: 10px; text-align: center;">
+      <img src="https://images.unsplash.com/photo-1576765607924-bb13f021d5fa?crop=entropy&cs=tinysrgb&fit=max&h=400&q=80&w=600" 
+           alt="Awareness Campaign" style="width:100%; height:150px; object-fit:cover; border-radius: 8px;">
+      <h3 style="color:#0c4a6e;">Awareness Campaigns</h3>
+      <p style="font-size: 14px;">Community workshops and events to reduce stigma and promote inclusion of children with disabilities.</p>
+    </div>
+
+    <div style="flex: 1 1 30%; background-color: #f7fbff; padding: 15px; border-radius: 10px; text-align: center;">
+      <img src="https://images.unsplash.com/photo-1594824476967-cf2c6d4ac6de?crop=entropy&cs=tinysrgb&fit=max&h=400&q=80&w=600"
+           alt="Assistive Devices" style="width:100%; height:150px; object-fit:cover; border-radius: 8px;">
+      <h3 style="color:#0c4a6e;">Assistive Devices</h3>
+      <p style="font-size: 14px;">Distribution of wheelchairs, walkers, and crutches to children in need.</p>
+    </div>
+
+    <div style="flex: 1 1 30%; background-color: #f7fbff; padding: 15px; border-radius: 10px; text-align: center;">
+      <img src="https://images.unsplash.com/photo-1578496479763-6e021c5e4e8a?crop=entropy&cs=tinysrgb&fit=max&h=400&q=80&w=600"
+           alt="Medical Support" style="width:100%; height:150px; object-fit:cover; border-radius: 8px;">
+      <h3 style="color:#0c4a6e;">Medical Access</h3>
+      <p style="font-size: 14px;">Connecting families to medical care, physiotherapy, and surgical referrals.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Meet Our Team</h2>
+  <p>Our team includes local caregivers, health professionals, educators, and advocates working together to support children and families in the Lake Zone region.</p>
+  <p><a href="team.html">Learn more about our team →</a></p>
+</div>
+
+<div class="section">
+  <h2>Recent News</h2>
+  <p>From outreach in Ilemela to seminars in Buswelu, see how we're making a difference.</p>
+  <p><a href="news.html">Read our updates →</a></p>
+</div>
+
+  </div>  <div class="signup">
+    <h2>Join Our Newsletter</h2>
+    <iframe aria-label='Newsletter Signup' frameborder="0" style="height:500px;width:99%;border:none;" src='https://forms.zohopublic.com/infocav1/form/NewsletterSignup/formperma/0yIiZTJj66LkVrglBEpa5t6oLMmS5Y0wKPs8LzjyuGU'></iframe>
+  </div>  <div class="footer">
+    <p>&copy; 2024 CAVITRD | Mwanza, Tanzania | <a href="mailto:info@cavitrd.org">info@cavitrd.org</a></p>
+    <p><a href="https://x.com/CAVITRD">Follow us on X</a></p>
+    <a class="donate-btn" href="#" target="_blank">Support Our Work</a>
+  </div>  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.menu');
+      menu.classList.toggle('active');
+    }
+  </script></body>
 </html>
