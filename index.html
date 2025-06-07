@@ -46,7 +46,7 @@
     .hero {
       position: relative;
       width: 100%;
-      height: 300px;
+      height: 320px;
       overflow: hidden;
     }
 
@@ -56,26 +56,35 @@
       object-fit: cover;
     }
 
-    .hero-text {
+    .hero-content {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      text-align: center;
       color: white;
       background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px;
+      padding: 25px 30px;
       border-radius: 8px;
-      text-align: center;
     }
 
-    .hero-text h1 {
-      font-size: 36px;
-      margin: 0;
+    .hero-content h1 {
+      font-size: 30px;
+      margin: 0 0 10px;
     }
 
-    .hero-text p {
-      font-size: 18px;
-      margin-top: 10px;
+    .hero-content a.button {
+      background: #ffffff;
+      color: #0c4a6e;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .hero-content a.button:hover {
+      background-color: #f1f7ff;
     }
 
     .container {
@@ -124,6 +133,10 @@
         width: 100%;
         align-items: flex-start;
       }
+
+      .hero-content h1 {
+        font-size: 22px;
+      }
     }
   </style>
 </head>
@@ -143,10 +156,10 @@
   </nav>
 
   <div class="hero">
-    <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1350&q=80" alt="Children Banner">
-    <div class="hero-text">
-      <h1>Welcome to CAVITRD</h1>
-      <p>Empowering children and adults with disabilities in rural Tanzania</p>
+    <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1350&q=80" alt="Children Banner" />
+    <div class="hero-content">
+      <h1>Together, We Support Rural Disabilities</h1>
+      <a href="projects.html" class="button">Get Involved</a>
     </div>
   </div>
 
