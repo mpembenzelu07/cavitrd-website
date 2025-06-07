@@ -3,6 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CAVITRD - Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       margin: 0;
@@ -106,6 +107,15 @@
     }
     .stat {
       margin: 10px 20px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .stat:hover {
+      transform: translateY(-5px);
+    }
+    .stat i {
+      font-size: 2.2rem;
+      color: #0c4a6e;
+      margin-bottom: 10px;
     }
     .stat h3 {
       color: #0c4a6e;
@@ -151,12 +161,25 @@
       background-color: #0c4a6e;
       color: white;
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 30px 20px;
     }
     .footer a {
       color: white;
       text-decoration: underline;
+    }
+    .donate-btn {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #ffffff;
+      color: #0c4a6e;
+      padding: 10px 20px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: background 0.3s;
+    }
+    .donate-btn:hover {
+      background-color: #d4e4f7;
     }
   </style>
 </head>
@@ -181,18 +204,22 @@
     </div>
   </header>  <section class="stats">
     <div class="stat">
+      <i class="fas fa-child"></i>
       <h3>100+</h3>
       <p>Children Reached</p>
     </div>
     <div class="stat">
+      <i class="fas fa-wheelchair"></i>
       <h3>20+</h3>
       <p>Assistive Devices Delivered</p>
     </div>
     <div class="stat">
+      <i class="fas fa-map-marker-alt"></i>
       <h3>5</h3>
       <p>Communities Served</p>
     </div>
     <div class="stat">
+      <i class="fas fa-hands-helping"></i>
       <h3>10+</h3>
       <p>Volunteers Involved</p>
     </div>
@@ -239,6 +266,7 @@
   </div>  <div class="footer">
     <p>&copy; 2024 CAVITRD | Mwanza, Tanzania | <a href="mailto:info@cavitrd.org">info@cavitrd.org</a></p>
     <p><a href="https://x.com/CAVITRD">Follow us on X</a></p>
+    <a class="donate-btn" href="#" target="_blank">Support Our Work</a>
   </div>  <script>
     function toggleMenu() {
       const menu = document.querySelector('.menu');
