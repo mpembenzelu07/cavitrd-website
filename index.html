@@ -1088,12 +1088,12 @@
           <p class="english-content">CAVITRD is dedicated to enhancing the lives of children and adults living with disabilities across Tanzania's Lake Zone region. We strive to create sustainable impact through comprehensive support systems and community integration.</p>
           <p class="swahili-content">CAVITRD imejikita katika kuboresha maisha ya watoto na watu wazima wenye ulemavu katika eneo la Ukanda wa Ziwa Tanzania. Tunajitahidi kuunda athari endelevu kupitia mifumo ya usaidizi kamili na ujumuishaji wa jamii.</p>
           <div class="hero-actions">
-            <a href="#" class="btn btn-primary" data-section="volunteers">
+            <a href="#" class="btn btn-primary section-link" data-section="volunteers">
               <i class="fas fa-handshake"></i>
               <span class="english-content">Get Involved</span>
               <span class="swahili-content">Jihusishe</span>
             </a>
-            <a href="#" class="btn btn-secondary" data-section="projects">
+            <a href="#" class="btn btn-secondary section-link" data-section="projects">
               <i class="fas fa-play-circle"></i>
               <span class="english-content">Our Work</span>
               <span class="swahili-content">Kazi Zetu</span>
@@ -1565,42 +1565,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Gallery Section (Hidden but accessible) -->
-    <section id="gallery" class="section" style="display: none;">
-      <div class="container">
-        <div class="section-title">
-          <h2 class="english-content">Our Gallery</h2>
-          <h2 class="swahili-content">Galeri Yetu</h2>
-        </div>
-        <div class="gallery-grid">
-          <div class="gallery-item" data-image="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80">
-            <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80" alt="Community Outreach">
-            <div class="gallery-overlay">
-              <i class="fas fa-search-plus"></i>
-            </div>
-          </div>
-          <div class="gallery-item" data-image="https://images.unsplash.com/photo-1579154204601-0151d5f4a0c8?auto=format&fit=crop&w=800&q=80">
-            <img src="https://images.unsplash.com/photo-1579154204601-0151d5f4a0c8?auto=format&fit=crop&w=800&q=80" alt="Team Work">
-            <div class="gallery-overlay">
-              <i class="fas fa-search-plus"></i>
-            </div>
-          </div>
-          <div class="gallery-item" data-image="https://images.unsplash.com/photo-1578496479763-6e021c5e4e8a?auto=format&fit=crop&w=800&q=80">
-            <img src="https://images.unsplash.com/photo-1578496479763-6e021c5e4e8a?auto=format&fit=crop&w=800&q=80" alt="Medical Support">
-            <div class="gallery-overlay">
-              <i class="fas fa-search-plus"></i>
-            </div>
-          </div>
-          <div class="gallery-item" data-image="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80">
-            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Community Meeting">
-            <div class="gallery-overlay">
-              <i class="fas fa-search-plus"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- Footer -->
@@ -1617,11 +1581,11 @@
           <h4 class="english-content">Quick Links</h4>
           <h4 class="swahili-content">Viungo vya Haraka</h4>
           <ul class="footer-links">
-            <li><a href="#" data-section="home"><i class="fas fa-chevron-right"></i> <span class="english-content">Home</span><span class="swahili-content">Nyumbani</span></a></li>
-            <li><a href="#" data-section="about"><i class="fas fa-chevron-right"></i> <span class="english-content">About Us</span><span class="swahili-content">Kuhusu Sisi</span></a></li>
-            <li><a href="#" data-section="projects"><i class="fas fa-chevron-right"></i> <span class="english-content">Our Projects</span><span class="swahili-content">Miradi Yetu</span></a></li>
-            <li><a href="#" data-section="volunteers"><i class="fas fa-chevron-right"></i> <span class="english-content">Volunteer</span><span class="swahili-content">Jitolea</span></a></li>
-            <li><a href="#" data-section="contact"><i class="fas fa-chevron-right"></i> <span class="english-content">Contact</span><span class="swahili-content">Wasiliana</span></a></li>
+            <li><a href="#" class="section-link" data-section="home"><i class="fas fa-chevron-right"></i> <span class="english-content">Home</span><span class="swahili-content">Nyumbani</span></a></li>
+            <li><a href="#" class="section-link" data-section="about"><i class="fas fa-chevron-right"></i> <span class="english-content">About Us</span><span class="swahili-content">Kuhusu Sisi</span></a></li>
+            <li><a href="#" class="section-link" data-section="projects"><i class="fas fa-chevron-right"></i> <span class="english-content">Our Projects</span><span class="swahili-content">Miradi Yetu</span></a></li>
+            <li><a href="#" class="section-link" data-section="volunteers"><i class="fas fa-chevron-right"></i> <span class="english-content">Volunteer</span><span class="swahili-content">Jitolea</span></a></li>
+            <li><a href="#" class="section-link" data-section="contact"><i class="fas fa-chevron-right"></i> <span class="english-content">Contact</span><span class="swahili-content">Wasiliana</span></a></li>
           </ul>
         </div>
         <div class="footer-column">
@@ -1694,6 +1658,7 @@
     const navLinks = document.getElementById('navLinks');
     const languageSwitcher = document.getElementById('languageSwitcher');
     const navItems = document.querySelectorAll('.nav-links a');
+    const sectionLinks = document.querySelectorAll('.section-link');
     const sections = document.querySelectorAll('section');
     const galleryItems = document.querySelectorAll('.gallery-item');
     const galleryModal = document.getElementById('galleryModal');
@@ -1772,33 +1737,49 @@
       }
     });
 
-    // Navigation
+    // Function to navigate to section
+    function navigateToSection(sectionId) {
+      // Update active nav item
+      navItems.forEach(navItem => navItem.classList.remove('active'));
+      const correspondingNavLink = document.querySelector(`.nav-links a[data-section="${sectionId}"]`);
+      if (correspondingNavLink) {
+        correspondingNavLink.classList.add('active');
+      }
+      
+      // Hide all sections
+      sections.forEach(section => {
+        section.style.display = 'none';
+      });
+      
+      // Show selected section
+      document.getElementById(sectionId).style.display = 'block';
+      
+      // Close mobile menu if open
+      navLinks.classList.remove('active');
+      mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+      
+      // Scroll to top of section
+      window.scrollTo({
+        top: sectionId === 'home' ? 0 : header.offsetHeight + 20,
+        behavior: 'smooth'
+      });
+    }
+
+    // Navigation for main menu
     navItems.forEach(item => {
       item.addEventListener('click', (e) => {
         e.preventDefault();
         const sectionId = item.dataset.section;
-        
-        // Update active nav item
-        navItems.forEach(navItem => navItem.classList.remove('active'));
-        item.classList.add('active');
-        
-        // Hide all sections
-        sections.forEach(section => {
-          section.style.display = 'none';
-        });
-        
-        // Show selected section
-        document.getElementById(sectionId).style.display = 'block';
-        
-        // Close mobile menu if open
-        navLinks.classList.remove('active');
-        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-        
-        // Scroll to top of section
-        window.scrollTo({
-          top: sectionId === 'home' ? 0 : header.offsetHeight,
-          behavior: 'smooth'
-        });
+        navigateToSection(sectionId);
+      });
+    });
+
+    // Navigation for section links (hero buttons, footer links, etc.)
+    sectionLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const sectionId = link.dataset.section;
+        navigateToSection(sectionId);
       });
     });
 
@@ -1904,15 +1885,21 @@
     // Back to top functionality
     backToTop.addEventListener('click', (e) => {
       e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      navigateToSection('home');
     });
 
     // Initialize with home section active
     window.addEventListener('DOMContentLoaded', () => {
       document.getElementById('home').style.display = 'block';
+      
+      // Add click handler to logo to go home
+      const logo = document.querySelector('.logo');
+      if (logo) {
+        logo.addEventListener('click', (e) => {
+          e.preventDefault();
+          navigateToSection('home');
+        });
+      }
     });
   </script>
 </body>
