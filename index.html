@@ -713,7 +713,7 @@
       box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.2);
     }
 
-    /* Volunteers Section */
+    /* Volunteers Section - Integrated Form Styles */
     .volunteer-options {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -739,6 +739,80 @@
       font-size: 3rem;
       color: var(--secondary-blue);
       margin-bottom: 20px;
+    }
+
+    /* Integrated Volunteer Form Styles */
+    .volunteer-form-container {
+      background: var(--white);
+      padding: 40px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      margin-top: 50px;
+    }
+
+    .volunteer-form-container h3 {
+      color: var(--primary-blue);
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    .volunteer-form-container p {
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .volunteer-form-container strong {
+      color: var(--primary-blue);
+    }
+
+    .volunteer-form-container form {
+      margin-top: 30px;
+    }
+
+    .volunteer-form-container label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .volunteer-form-container input,
+    .volunteer-form-container textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0 20px 0;
+      border-radius: 6px;
+      border: 1px solid #bbb;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .volunteer-form-container input:focus,
+    .volunteer-form-container textarea:focus {
+      outline: none;
+      border-color: var(--secondary-blue);
+      box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.2);
+    }
+
+    .volunteer-form-container button {
+      background-color: var(--primary-blue);
+      padding: 12px 20px;
+      color: var(--white);
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .volunteer-form-container button:hover {
+      background: var(--dark-blue);
+      transform: translateY(-2px);
     }
 
     /* Gallery Section */
@@ -871,8 +945,8 @@
       text-align: center;
       padding-top: 30px;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
-      color: rgba(255, 255, 255, 0.7);
       font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
     }
 
     /* Modal for Gallery */
@@ -1009,7 +1083,8 @@
         padding: 0 20px;
       }
 
-      .contact-form {
+      .contact-form,
+      .volunteer-form-container {
         padding: 25px;
       }
     }
@@ -1047,6 +1122,9 @@
         <div class="logo-text">
           <span class="english-content">CAVITRD</span>
           <span class="swahili-content">CAVITRD</span>
+          <span class="english-content">Center for Assistance and Vision</span>
+          <span class="swahili-content">Kituo cha Usaidizi na Maono</span>
+        </div>
       </a>
 
       <nav>
@@ -1195,7 +1273,7 @@
         <div class="team-grid">
           <div class="team-member">
             <div class="member-image">
-              <img src="Image/A.jpg" alt="James Shimba">
+              <img src="Image/A.jpg" alt="James Shimba" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80';">
             </div>
             <div class="member-info">
               <h4>James Shimba</h4>
@@ -1212,7 +1290,7 @@
           </div>
           <div class="team-member">
             <div class="member-image">
-              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80" alt="Irene Amati Chacha">
+              <img src="Image/C.jpg" alt="Irene Amati Chacha" onerror="this.src='https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80';">
             </div>
             <div class="member-info">
               <h4>Irene Amati Chacha</h4>
@@ -1229,12 +1307,12 @@
           </div>
           <div class="team-member">
             <div class="member-image">
-              <img src="Image/B.jpg" alt="Aneth Ndelilo Mwenda">
+              <img src="Image/B.jpg" alt="Aneth Ndelilo Mwenda" onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80';">
             </div>
             <div class="member-info">
               <h4>Aneth Ndelilo Mwenda</h4>
-              <span class="member-role english-content">Secretary</span>
-              <span class="member-role swahili-content">Secretary</span>
+              <span class="member-role english-content">Board Member</span>
+              <span class="member-role swahili-content">Mwanzilishi wa Bodi</span>
               <p class="english-content">Overseeing program implementation and community engagement.</p>
               <p class="swahili-content">Anasimamia utekelezaji wa programu na ushirikiano wa jamii.</p>
               <div class="member-social">
@@ -1409,69 +1487,99 @@
         </div>
       </div>
     </section>
-    <!-- Volunteers Section -->
-<section id="volunteers" class="section" style="display: none;">
-  <div class="container">
-    <div class="section-title">
-      <h2 class="english-content">Volunteer With Us</h2>
-      <h2 class="swahili-content">Jitolee Nasi</h2>
-    </div>
-    <div class="volunteer-options">
-      <div class="volunteer-option">
-        <div class="volunteer-icon">
-          <i class="fas fa-user-md"></i>
+
+    <!-- Volunteers Section - WITH INTEGRATED FORM -->
+    <section id="volunteers" class="section" style="display: none;">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="english-content">Medical Volunteer Opportunities</h2>
+          <h2 class="swahili-content">Fursa za Kujitolea kwa Matibabu</h2>
         </div>
-        <h3 class="english-content">Medical Professionals</h3>
-        <h3 class="swahili-content">Wataalamu wa Matibabu</h3>
-        <p class="english-content">Join our medical outreach programs and provide specialized care to those in need.</p>
-        <p class="swahili-content">Jiunge na programu zetu za ufikiaji wa matibabu na toa huduma maalum kwa wale wenye uhitaji.</p>
-      </div>
-      <div class="volunteer-option">
-        <div class="volunteer-icon">
-          <i class="fas fa-hands-helping"></i>
+
+        <div class="volunteer-options">
+          <div class="volunteer-option">
+            <div class="volunteer-icon">
+              <i class="fas fa-user-md"></i>
+            </div>
+            <h3 class="english-content">Medical Professionals</h3>
+            <h3 class="swahili-content">Wataalamu wa Matibabu</h3>
+            <p class="english-content">Join our medical outreach programs and provide specialized care to those in need.</p>
+            <p class="swahili-content">Jiunge na programu zetu za ufikiaji wa matibabu na toa huduma maalum kwa wale wenye uhitaji.</p>
+          </div>
+          <div class="volunteer-option">
+            <div class="volunteer-icon">
+              <i class="fas fa-hands-helping"></i>
+            </div>
+            <h3 class="english-content">Community Volunteers</h3>
+            <h3 class="swahili-content">Wajitoleaji wa Jamii</h3>
+            <p class="english-content">Help with awareness campaigns, community mobilization, and support services.</p>
+            <p class="swahili-content">Saidia na kampeni za ufahamu, uhamasishaji wa jamii, na huduma za usaidizi.</p>
+          </div>
+          <div class="volunteer-option">
+            <div class="volunteer-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="english-content">Students & Interns</h3>
+            <h3 class="swahili-content">Wanafunzi na Wafanyakazi wa Mafunzo</h3>
+            <p class="english-content">Gain practical experience while contributing to meaningful community work.</p>
+            <p class="swahili-content">Pata uzoefu wa vitendo huku ukichangia kazi yenye maana ya jamii.</p>
+          </div>
         </div>
-        <h3 class="english-content">Community Volunteers</h3>
-        <h3 class="swahili-content">Wajitoleaji wa Jamii</h3>
-        <p class="english-content">Help with awareness campaigns, community mobilization, and support services.</p>
-        <p class="swahili-content">Saidia na kampeni za ufahamu, uhamasishaji wa jamii, na huduma za usaidizi.</p>
-      </div>
-      <div class="volunteer-option">
-        <div class="volunteer-icon">
-          <i class="fas fa-graduation-cap"></i>
+
+        <!-- Integrated Volunteer Form -->
+        <div class="volunteer-form-container">
+          <p class="english-content">
+            CAVITRD welcomes medical professionals who are passionate about helping children and adults with congenital or trauma-related disabilities within the Lake Zone regions of Tanzania.
+          </p>
+          <p class="swahili-content">
+            CAVITRD inakaribisha wataalamu wa matibabu wenye shauku ya kusaidia watoto na watu wazima walio na ulemavu wa kuzaliwa au unaohusiana na majeraha ndani ya mikoa ya Ukanda wa Ziwa Tanzania.
+          </p>
+          <p class="english-content">
+            Fill the form below and our coordination team will contact you.<br>
+            <strong>All submissions will be sent directly to our official email: info@cavitrd.org</strong>
+          </p>
+          <p class="swahili-content">
+            Jaza fomu hapa chini na timu yetu ya uratibu itawasiliana nawe.<br>
+            <strong>Maombi yote yatatuma moja kwa moja kwa barua pepe yetu rasmi: info@cavitrd.org</strong>
+          </p>
+
+          <!-- FORM THAT SENDS EMAIL TO info@cavitrd.org -->
+          <form action="https://formsubmit.co/info@cavitrd.org" method="POST">
+            <!-- Anti-spam -->
+            <input type="hidden" name="_captcha" value="false">
+            
+            <!-- Redirect after submit -->
+            <input type="hidden" name="_next" value="thankyou.html">
+            
+            <!-- Form Subject -->
+            <input type="hidden" name="_subject" value="New Volunteer Application - CAVITRD">
+
+            <label class="english-content">Full Name</label>
+            <label class="swahili-content">Jina Kamili</label>
+            <input type="text" name="Full Name" required>
+
+            <label class="english-content">Email</label>
+            <label class="swahili-content">Barua Pepe</label>
+            <input type="email" name="Email" required>
+
+            <label class="english-content">Phone Number</label>
+            <label class="swahili-content">Nambari ya Simu</label>
+            <input type="text" name="Phone" required>
+
+            <label class="english-content">Medical Specialization</label>
+            <label class="swahili-content">Utaalamu wa Matibabu</label>
+            <input type="text" name="Specialization" required placeholder="e.g., Surgeon, Orthopedic, Nurse, Physiotherapist">
+
+            <label class="english-content">Message</label>
+            <label class="swahili-content">Ujumbe</label>
+            <textarea name="Message" rows="4" placeholder="Tell us about your volunteering interest..." required></textarea>
+
+            <button type="submit">Submit Application</button>
+          </form>
         </div>
-        <h3 class="english-content">Students & Interns</h3>
-        <h3 class="swahili-content">Wanafunzi na Wafanyakazi wa Mafunzo</h3>
-        <p class="english-content">Gain practical experience while contributing to meaningful community work.</p>
-        <p class="swahili-content">Pata uzoefu wa vitendo huku ukichangia kazi yenye maana ya jamii.</p>
       </div>
-    </div>
-    
-    <!-- ZOHO FORM START -->
-    <div class="contact-form">
-      <h3 class="english-content" style="margin-bottom: 30px; color: var(--primary-blue);">Volunteer Application Form</h3>
-      <h3 class="swahili-content" style="margin-bottom: 30px; color: var(--primary-blue);">Fomu ya Maombi ya Kujitolea</h3>
-      
-      <!-- Zoho Form Integration -->
-      <iframe 
-        frameborder="0" 
-        style="height:600px;width:100%;border:none;" 
-        src='https://forms.zohopublic.com/infocav1/form/VolunteerApplicationForm/formperma/8gLcY3VQxH4q5zZwyC2b_sl41vAkrPChXlSBRh9hrX4'
-      >
-      </iframe>
-      
-      <!-- Alternative: Direct Contact Info -->
-      <div style="text-align: center; margin-top: 30px; padding: 20px; background: rgba(30, 136, 229, 0.05); border-radius: 10px;">
-        <h4 class="english-content" style="color: var(--primary-blue); margin-bottom: 10px;">Or Email Us Directly</h4>
-        <h4 class="swahili-content" style="color: var(--primary-blue); margin-bottom: 10px;">Au Tupigie Simu Moja kwa Moja</h4>
-        <p class="english-content" style="margin-bottom: 5px;">Send your application to: <strong>info@cavitrd.org</strong></p>
-        <p class="swahili-content" style="margin-bottom: 5px;">Tuma ombi lako kwa: <strong>info@cavitrd.org</strong></p>
-        <p class="english-content">Include your: Full Name, Phone, Specialization, and Volunteering Interest</p>
-        <p class="swahili-content">Jumuisha: Jina kamili, Simu, Utaalamu, na Tamanio la Kujitolea</p>
-      </div>
-    </div>
-    <!-- ZOHO FORM END -->
-  </div>
-</section>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="section" style="display: none;">
       <div class="container">
@@ -1508,7 +1616,7 @@
               <div>
                 <h4 class="english-content">Phone Number</h4>
                 <h4 class="swahili-content">Nambari ya Simu</h4>
-                <p>+255 718 851 139</p>
+                <p>+255 000 000 000</p>
               </div>
             </div>
             <div class="contact-item">
@@ -1574,7 +1682,7 @@
           <h4 class="swahili-content">Taarifa za Mawasiliano</h4>
           <ul class="footer-links">
             <li><a href="mailto:info@cavitrd.org"><i class="fas fa-envelope"></i> info@cavitrd.org</a></li>
-            <li><a href="tel:+255 718 851 139"><i class="fas fa-phone"></i> +255 718 851 139</a></li>
+            <li><a href="tel:+255000000000"><i class="fas fa-phone"></i> +255 000 000 000</a></li>
             <li><a href="#"><i class="fas fa-map-marker-alt"></i> Mwanza, Tanzania</a></li>
           </ul>
           <div class="footer-social">
@@ -1597,16 +1705,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Gallery Modal -->
-  <div class="modal" id="galleryModal">
-    <button class="modal-close" id="modalClose">
-      <i class="fas fa-times"></i>
-    </button>
-    <div class="modal-content">
-      <img id="modalImage" src="" alt="">
-    </div>
-  </div>
 
   <!-- Thank You Modal (for form submission) -->
   <div class="modal" id="thankYouModal">
@@ -1641,12 +1739,7 @@
     const navItems = document.querySelectorAll('.nav-links a');
     const sectionLinks = document.querySelectorAll('.section-link');
     const sections = document.querySelectorAll('section');
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    const galleryModal = document.getElementById('galleryModal');
-    const modalImage = document.getElementById('modalImage');
-    const modalClose = document.getElementById('modalClose');
     const thankYouModal = document.getElementById('thankYouModal');
-    const volunteerForm = document.getElementById('volunteerForm');
     const thankYouClose = document.getElementById('thankYouClose');
     const closeThankYou = document.getElementById('closeThankYou');
 
@@ -1763,53 +1856,6 @@
         navigateToSection(sectionId);
       });
     });
-
-    // Gallery modal
-    galleryItems.forEach(item => {
-      item.addEventListener('click', () => {
-        const imageSrc = item.dataset.image;
-        modalImage.src = imageSrc;
-        galleryModal.classList.add('active');
-        body.style.overflow = 'hidden';
-      });
-    });
-
-    modalClose.addEventListener('click', () => {
-      galleryModal.classList.remove('active');
-      body.style.overflow = 'auto';
-    });
-
-    galleryModal.addEventListener('click', (e) => {
-      if (e.target === galleryModal) {
-        galleryModal.classList.remove('active');
-        body.style.overflow = 'auto';
-      }
-    });
-
-    // Form submission
-    if (volunteerForm) {
-      volunteerForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Show loading state
-        const submitBtn = volunteerForm.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span class="english-content">Submitting...</span><span class="swahili-content">Inawasilisha...</span>';
-        submitBtn.disabled = true;
-        
-        // Simulate form submission
-        setTimeout(() => {
-          // Show thank you modal
-          thankYouModal.classList.add('active');
-          body.style.overflow = 'hidden';
-          
-          // Reset form
-          volunteerForm.reset();
-          submitBtn.innerHTML = originalText;
-          submitBtn.disabled = false;
-        }, 1500);
-      });
-    }
 
     // Close thank you modal
     thankYouClose.addEventListener('click', () => {
