@@ -31,69 +31,91 @@
       font-weight: 600;
     }
 
-    nav {
-      background-color: var(--primary-blue);
-      padding: 1rem 2rem;
+    /* ========== DESKTOP NAVIGATION ========== */
+    .desktop-nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background-color: var(--primary-blue);
+      padding: 0.8rem 2rem;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
     }
 
-    .menu {
+    .logo-container {
       display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
+      align-items: center;
+      gap: 0.8rem;
     }
 
-    nav a {
-      color: var(--white);
+    .logo-icon {
+      color: #93c5fd;
+      font-size: 1.5rem;
+    }
+
+    .logo-text {
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
+    }
+
+    .desktop-menu {
+      display: flex;
+      gap: 0.2rem;
+      background-color: rgba(255, 255, 255, 0.08);
+      padding: 0.3rem;
+      border-radius: 8px;
+    }
+
+    .desktop-menu a {
+      color: rgba(255, 255, 255, 0.85);
       text-decoration: none;
       font-weight: 500;
-      padding: 0.5rem 0;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
       transition: all 0.3s ease;
-      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
     }
 
-    nav a.active {
-      color: #93c5fd;
+    .desktop-menu a:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: white;
+      transform: translateY(-1px);
     }
 
-    nav a:hover:not(.active) {
-      color: #93c5fd;
-      transform: translateY(-2px);
+    .desktop-menu a.active {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+      font-weight: 600;
     }
 
-    nav a::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: #93c5fd;
-      transition: width 0.3s ease;
-    }
-
-    nav a:hover::after {
-      width: 100%;
+    .desktop-menu a i {
+      font-size: 0.85rem;
+      opacity: 0.9;
     }
 
     .language-switch {
       display: flex;
       gap: 0.5rem;
       align-items: center;
+      background-color: rgba(255, 255, 255, 0.08);
+      padding: 0.4rem 0.6rem;
+      border-radius: 6px;
     }
 
     .language-switch a {
       color: #fef3c7;
       text-decoration: none;
-      padding: 0.25rem 0.5rem;
-      border-radius: 3px;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
       transition: all 0.3s ease;
+      font-size: 0.9rem;
     }
 
     .language-switch a.active {
@@ -105,6 +127,141 @@
       background-color: rgba(255, 255, 255, 0.1);
     }
 
+    /* ========== MOBILE NAVIGATION ========== */
+    .mobile-nav {
+      display: none;
+      background-color: var(--primary-blue);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mobile-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .mobile-logo i {
+      color: #93c5fd;
+    }
+
+    .menu-toggle {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .menu-toggle:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--primary-blue);
+      z-index: 999;
+      display: none;
+      flex-direction: column;
+      padding: 2rem 1.5rem;
+      overflow-y: auto;
+    }
+
+    .mobile-menu-overlay.active {
+      display: flex;
+    }
+
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-menu-close {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.8rem;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .mobile-menu-items {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      flex: 1;
+    }
+
+    .mobile-menu-items a {
+      color: white;
+      text-decoration: none;
+      padding: 1rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: background-color 0.3s;
+      font-size: 1.1rem;
+    }
+
+    .mobile-menu-items a:hover,
+    .mobile-menu-items a.active {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .mobile-menu-items a i {
+      width: 1.5rem;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .mobile-language-switch {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-language-switch a {
+      color: #fef3c7;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+    }
+
+    .mobile-language-switch a.active {
+      background-color: rgba(255, 255, 255, 0.15);
+      font-weight: 600;
+    }
+
+    /* ========== HERO SECTION ========== */
     .hero {
       position: relative;
       width: 100%;
@@ -137,6 +294,7 @@
       color: var(--white);
       width: 90%;
       max-width: 800px;
+      padding: 0 1rem;
     }
 
     .hero-content h1 {
@@ -166,6 +324,7 @@
       border-color: rgba(255, 255, 255, 0.2);
     }
 
+    /* ========== CONTENT SECTIONS ========== */
     .container {
       max-width: 1000px;
       margin: 3rem auto;
@@ -225,6 +384,7 @@
       text-decoration: underline;
     }
 
+    /* ========== FOOTER ========== */
     footer {
       background-color: var(--primary-blue);
       color: var(--white);
@@ -262,16 +422,25 @@
       color: rgba(255, 255, 255, 0.7);
     }
 
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
+    /* ========== RESPONSIVE BREAKPOINTS ========== */
+    @media (max-width: 1024px) {
+      .desktop-menu {
+        gap: 0.1rem;
       }
       
-      .menu {
-        justify-content: center;
-        gap: 1rem;
+      .desktop-menu a {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .desktop-nav {
+        display: none;
+      }
+      
+      .mobile-nav {
+        display: block;
       }
       
       .hero {
@@ -292,13 +461,17 @@
       }
     }
 
-    @media (max-width: 480px) {
-      .menu {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
+    @media (min-width: 901px) {
+      .mobile-nav {
+        display: none;
       }
       
+      .desktop-nav {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 480px) {
       .hero-content h1 {
         font-size: 1.5rem;
       }
@@ -306,20 +479,46 @@
       .button {
         padding: 0.7rem 1.5rem;
       }
+      
+      .mobile-menu-items a {
+        padding: 1rem;
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <div class="menu">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="team.html">Our Team</a>
-      <a href="projects.html">What We Do</a>
-      <a href="news.html">News</a>
-      <a href="contact.html">Contact</a>
-      <a href="volunteers.html">Volunteers</a>
+  <!-- Desktop Navigation (Flat, Slim, Professional) -->
+  <nav class="desktop-nav">
+    <div class="logo-container">
+      <i class="fas fa-hands-helping logo-icon"></i>
+      <div class="logo-text">CAVITRD</div>
     </div>
+    
+    <div class="desktop-menu">
+      <a href="index.html" class="active">
+        <i class="fas fa-home"></i> Home
+      </a>
+      <a href="about.html">
+        <i class="fas fa-info-circle"></i> About
+      </a>
+      <a href="team.html">
+        <i class="fas fa-users"></i> Our Team
+      </a>
+      <a href="projects.html">
+        <i class="fas fa-hands"></i> What We Do
+      </a>
+      <a href="news.html">
+        <i class="fas fa-newspaper"></i> News
+      </a>
+      <a href="contact.html">
+        <i class="fas fa-envelope"></i> Contact
+      </a>
+      <a href="volunteers.html">
+        <i class="fas fa-heart"></i> Volunteers
+      </a>
+    </div>
+    
     <div class="language-switch">
       <a href="index.html" class="active">EN</a>
       <span style="color: #fef3c7;">|</span>
@@ -327,6 +526,62 @@
     </div>
   </nav>
 
+  <!-- Mobile Navigation (Full-screen overlay) -->
+  <nav class="mobile-nav">
+    <div class="mobile-header">
+      <div class="mobile-logo">
+        <i class="fas fa-hands-helping"></i>
+        <span>CAVITRD</span>
+      </div>
+      <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="mobile-logo">
+        <i class="fas fa-hands-helping"></i>
+        <span>CAVITRD</span>
+      </div>
+      <button class="mobile-menu-close" id="menuClose">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <div class="mobile-menu-items">
+      <a href="index.html" class="active">
+        <i class="fas fa-home"></i> Home
+      </a>
+      <a href="about.html">
+        <i class="fas fa-info-circle"></i> About
+      </a>
+      <a href="team.html">
+        <i class="fas fa-users"></i> Our Team
+      </a>
+      <a href="projects.html">
+        <i class="fas fa-hands"></i> What We Do
+      </a>
+      <a href="news.html">
+        <i class="fas fa-newspaper"></i> News
+      </a>
+      <a href="contact.html">
+        <i class="fas fa-envelope"></i> Contact
+      </a>
+      <a href="volunteers.html">
+        <i class="fas fa-heart"></i> Volunteers
+      </a>
+    </div>
+    
+    <div class="mobile-language-switch">
+      <a href="index.html" class="active">English (EN)</a>
+      <a href="index-sw.html">Swahili (SW)</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
   <div class="hero">
     <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1350&q=80" alt="Children in Tanzania smiling" />
     <div class="hero-overlay"></div>
@@ -336,6 +591,7 @@
     </div>
   </div>
 
+  <!-- Main Content -->
   <div class="container">
     <section>
       <h2>Our Mission</h2>
@@ -353,6 +609,7 @@
     </section>
   </div>
 
+  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <p><strong>CAVITRD</strong> | Mwanza, Tanzania</p>
@@ -362,5 +619,40 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Mobile menu toggle functionality
+    const menuToggle = document.getElementById('menuToggle');
+    const menuClose = document.getElementById('menuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const body = document.body;
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.add('active');
+      body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+    });
+
+    menuClose.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      body.style.overflow = 'auto';
+    });
+
+    // Close menu when clicking on links
+    const mobileLinks = document.querySelectorAll('.mobile-menu-items a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        body.style.overflow = 'auto';
+      });
+    });
+
+    // Close menu when clicking outside
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) {
+        mobileMenu.classList.remove('active');
+        body.style.overflow = 'auto';
+      }
+    });
+  </script>
 </body>
 </html>
