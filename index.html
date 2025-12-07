@@ -3,655 +3,1916 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CAVITRD | Empowering Disabilities in Lake Zone Tanzania</title>
+  <title>CAVITRD - Empowering Disabilities in Tanzania's Lake Zone</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <style>
     :root {
       --primary-blue: #0c4a6e;
-      --secondary-blue: #0d5c8a;
-      --accent-blue: #1e8bc3;
+      --secondary-blue: #1e88e5;
+      --accent-blue: #29b6f6;
+      --dark-blue: #083d5e;
       --light-bg: #f8fafc;
-      --text-dark: #1e293b;
-      --text-light: #64748b;
+      --text-dark: #1a202c;
+      --text-light: #4a5568;
       --white: #ffffff;
-      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --gray-100: #f7fafc;
+      --gray-200: #edf2f7;
+      --success: #38a169;
+      --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+      --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      margin: 0;
       font-family: 'Open Sans', sans-serif;
       background-color: var(--light-bg);
       color: var(--text-dark);
       line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body.swahili .english-content {
+      display: none !important;
+    }
+
+    body.english .swahili-content {
+      display: none !important;
     }
 
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Poppins', sans-serif;
-      font-weight: 600;
+      font-weight: 700;
+      line-height: 1.3;
     }
 
-    /* ========== DESKTOP NAVIGATION ========== */
-    .desktop-nav {
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: var(--primary-blue);
+      display: inline-block;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--accent-blue);
+      border-radius: 2px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .btn-primary {
+      background: var(--secondary-blue);
+      color: var(--white);
+      box-shadow: 0 4px 12px rgba(30, 136, 229, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-blue);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(30, 136, 229, 0.4);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--secondary-blue);
+      border: 2px solid var(--secondary-blue);
+    }
+
+    .btn-secondary:hover {
+      background: var(--secondary-blue);
+      color: var(--white);
+      transform: translateY(-3px);
+    }
+
+    /* ========== HEADER & NAVIGATION ========== */
+    header {
+      background-color: var(--white);
+      box-shadow: var(--shadow-md);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: var(--transition);
+    }
+
+    .header-scrolled {
+      padding: 5px 0;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .header-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: var(--primary-blue);
-      padding: 0.8rem 2rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      padding: 15px 20px;
     }
 
-    .logo-container {
+    .logo {
       display: flex;
       align-items: center;
-      gap: 0.8rem;
+      gap: 12px;
+      text-decoration: none;
     }
 
     .logo-icon {
-      color: #93c5fd;
+      width: 50px;
+      height: 50px;
+      background: var(--primary-blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
       font-size: 1.5rem;
     }
 
     .logo-text {
-      color: white;
-      font-weight: 700;
-      font-size: 1.2rem;
-      letter-spacing: 0.5px;
-    }
-
-    .desktop-menu {
       display: flex;
-      gap: 0.2rem;
-      background-color: rgba(255, 255, 255, 0.08);
-      padding: 0.3rem;
-      border-radius: 8px;
+      flex-direction: column;
     }
 
-    .desktop-menu a {
-      color: rgba(255, 255, 255, 0.85);
-      text-decoration: none;
-      font-weight: 500;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.9rem;
-    }
-
-    .desktop-menu a:hover {
-      background-color: rgba(255, 255, 255, 0.15);
-      color: white;
-      transform: translateY(-1px);
-    }
-
-    .desktop-menu a.active {
-      background-color: rgba(255, 255, 255, 0.2);
-      color: white;
-      font-weight: 600;
-    }
-
-    .desktop-menu a i {
-      font-size: 0.85rem;
-      opacity: 0.9;
-    }
-
-    .language-switch {
-      display: flex;
-      gap: 0.5rem;
-      align-items: center;
-      background-color: rgba(255, 255, 255, 0.08);
-      padding: 0.4rem 0.6rem;
-      border-radius: 6px;
-    }
-
-    .language-switch a {
-      color: #fef3c7;
-      text-decoration: none;
-      padding: 0.3rem 0.8rem;
-      border-radius: 4px;
-      transition: all 0.3s ease;
-      font-size: 0.9rem;
-    }
-
-    .language-switch a.active {
-      background-color: rgba(255, 255, 255, 0.15);
-      font-weight: 600;
-    }
-
-    .language-switch a:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    /* ========== MOBILE NAVIGATION ========== */
-    .mobile-nav {
-      display: none;
-      background-color: var(--primary-blue);
-      padding: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .mobile-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .mobile-logo {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      color: white;
-      font-weight: 700;
-      font-size: 1.1rem;
-    }
-
-    .mobile-logo i {
-      color: #93c5fd;
-    }
-
-    .menu-toggle {
-      background: none;
-      border: none;
-      color: white;
+    .logo-text span:first-child {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
       font-size: 1.5rem;
-      cursor: pointer;
-      padding: 0.5rem;
-      border-radius: 4px;
-      transition: background-color 0.3s;
+      color: var(--primary-blue);
+      line-height: 1;
     }
 
-    .menu-toggle:hover {
-      background-color: rgba(255, 255, 255, 0.1);
+    .logo-text span:last-child {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      letter-spacing: 1px;
     }
 
-    .mobile-menu-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background-color: var(--primary-blue);
-      z-index: 999;
-      display: none;
-      flex-direction: column;
-      padding: 2rem 1.5rem;
-      overflow-y: auto;
-    }
-
-    .mobile-menu-overlay.active {
+    .nav-links {
       display: flex;
+      gap: 10px;
+      list-style: none;
     }
 
-    .mobile-menu-header {
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 600;
+      padding: 10px 16px;
+      border-radius: 6px;
+      transition: var(--transition);
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      margin-bottom: 2rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      gap: 8px;
+      font-size: 0.95rem;
     }
 
-    .mobile-menu-close {
+    .nav-links a:hover {
+      color: var(--secondary-blue);
+      background: rgba(30, 136, 229, 0.05);
+    }
+
+    .nav-links a.active {
+      color: var(--white);
+      background: var(--secondary-blue);
+    }
+
+    .nav-links a i {
+      font-size: 0.9rem;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .language-switcher {
+      display: flex;
+      background: var(--gray-200);
+      border-radius: 30px;
+      padding: 4px;
+      position: relative;
+    }
+
+    .language-switcher button {
+      background: transparent;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      z-index: 1;
+      position: relative;
+      color: var(--text-light);
+    }
+
+    .language-switcher .active-lang {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 50%;
+      height: calc(100% - 8px);
+      background: var(--white);
+      border-radius: 30px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.4s ease;
+    }
+
+    .language-switcher.english .active-lang {
+      transform: translateX(0);
+    }
+
+    .language-switcher.swahili .active-lang {
+      transform: translateX(100%);
+    }
+
+    .language-switcher.english button:first-child,
+    .language-switcher.swahili button:last-child {
+      color: var(--primary-blue);
+    }
+
+    .mobile-menu-btn {
+      display: none;
       background: none;
       border: none;
-      color: white;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
+      color: var(--primary-blue);
       cursor: pointer;
-      padding: 0.5rem;
-    }
-
-    .mobile-menu-items {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      flex: 1;
-    }
-
-    .mobile-menu-items a {
-      color: white;
-      text-decoration: none;
-      padding: 1rem 1.2rem;
-      border-radius: 8px;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      transition: background-color 0.3s;
-      font-size: 1.1rem;
-    }
-
-    .mobile-menu-items a:hover,
-    .mobile-menu-items a.active {
-      background-color: rgba(255, 255, 255, 0.15);
-    }
-
-    .mobile-menu-items a i {
-      width: 1.5rem;
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
-
-    .mobile-language-switch {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 2rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .mobile-language-switch a {
-      color: #fef3c7;
-      text-decoration: none;
-      font-size: 1.1rem;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-    }
-
-    .mobile-language-switch a.active {
-      background-color: rgba(255, 255, 255, 0.15);
-      font-weight: 600;
+      padding: 5px;
     }
 
     /* ========== HERO SECTION ========== */
     .hero {
+      padding-top: 120px;
       position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+      color: var(--white);
+    }
+
+    .hero-wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
       width: 100%;
-      height: 380px;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+    }
+
+    .hero-wave svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 60px;
+    }
+
+    .hero-wave .shape-fill {
+      fill: var(--light-bg);
+    }
+
+    .hero-container {
+      display: flex;
+      align-items: center;
+      min-height: 600px;
+      gap: 40px;
+    }
+
+    .hero-content {
+      flex: 1;
+      padding: 40px 0;
+    }
+
+    .hero-content h1 {
+      font-size: 3.2rem;
+      margin-bottom: 20px;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+      max-width: 600px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .hero-image {
+      flex: 1;
+      position: relative;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      transform: perspective(1000px) rotateY(-5deg);
+      transition: var(--transition);
+    }
+
+    .hero-image img:hover {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+
+    .stats-container {
+      display: flex;
+      justify-content: space-around;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 30px;
+      margin-top: 40px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      z-index: 2;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--secondary-blue);
+      display: block;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: var(--text-light);
+      margin-top: 5px;
+    }
+
+    /* ========== SECTIONS ========== */
+    .section {
+      padding: 100px 0;
+    }
+
+    .section:nth-child(even) {
+      background: var(--white);
+    }
+
+    /* About Section */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-image {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .about-image img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.5s ease;
+    }
+
+    .about-image:hover img {
+      transform: scale(1.05);
+    }
+
+    .about-text h3 {
+      font-size: 1.8rem;
+      color: var(--primary-blue);
+      margin-bottom: 20px;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .value-card {
+      background: var(--white);
+      padding: 25px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      border-top: 4px solid var(--accent-blue);
+      transition: var(--transition);
+    }
+
+    .value-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .value-card i {
+      font-size: 2rem;
+      color: var(--secondary-blue);
+      margin-bottom: 15px;
+    }
+
+    /* Team Section */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .team-member {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .team-member:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .member-image {
+      height: 250px;
       overflow: hidden;
     }
 
-    .hero img {
+    .member-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: brightness(0.8);
+      transition: transform 0.5s ease;
     }
 
-    .hero-overlay {
+    .team-member:hover .member-image img {
+      transform: scale(1.1);
+    }
+
+    .member-info {
+      padding: 25px;
+    }
+
+    .member-info h4 {
+      color: var(--primary-blue);
+      margin-bottom: 5px;
+    }
+
+    .member-role {
+      color: var(--secondary-blue);
+      font-weight: 600;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .member-social {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .member-social a {
+      color: var(--text-light);
+      transition: var(--transition);
+    }
+
+    .member-social a:hover {
+      color: var(--secondary-blue);
+      transform: translateY(-3px);
+    }
+
+    /* Projects Section */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .project-image {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .project-card:hover .project-image img {
+      transform: scale(1.1);
+    }
+
+    .project-content {
+      padding: 25px;
+    }
+
+    .project-content h4 {
+      color: var(--primary-blue);
+      margin-bottom: 15px;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .project-tag {
+      background: rgba(30, 136, 229, 0.1);
+      color: var(--secondary-blue);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* News Section */
+    .news-slider {
+      position: relative;
+      padding: 0 40px;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+      padding: 20px 0;
+    }
+
+    .news-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      height: 100%;
+      transition: var(--transition);
+    }
+
+    .news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .news-date {
+      background: var(--secondary-blue);
+      color: var(--white);
+      padding: 12px 20px;
+      display: inline-block;
+      font-weight: 600;
+      border-radius: 0 0 10px 0;
+    }
+
+    .news-content {
+      padding: 25px;
+    }
+
+    .news-content h4 {
+      color: var(--primary-blue);
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+      color: var(--secondary-blue) !important;
+      background: var(--white);
+      width: 50px !important;
+      height: 50px !important;
+      border-radius: 50%;
+      box-shadow: var(--shadow-md);
+    }
+
+    .swiper-button-next:after, .swiper-button-prev:after {
+      font-size: 1.2rem !important;
+    }
+
+    /* Contact Section */
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(30, 136, 229, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--secondary-blue);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .contact-form {
+      background: var(--white);
+      padding: 40px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 15px;
+      border: 2px solid var(--gray-200);
+      border-radius: 8px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--secondary-blue);
+      box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.2);
+    }
+
+    /* Volunteers Section */
+    .volunteer-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .volunteer-option {
+      background: var(--white);
+      padding: 40px 30px;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+    }
+
+    .volunteer-option:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .volunteer-icon {
+      font-size: 3rem;
+      color: var(--secondary-blue);
+      margin-bottom: 20px;
+    }
+
+    /* Gallery Section */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery-item {
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+      height: 250px;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-overlay {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, rgba(12, 74, 110, 0.85) 0%, rgba(12, 74, 110, 0.7) 100%);
+      background: rgba(12, 74, 110, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: var(--transition);
     }
 
-    .hero-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-overlay i {
       color: var(--white);
-      width: 90%;
-      max-width: 800px;
-      padding: 0 1rem;
+      font-size: 2rem;
     }
 
-    .hero-content h1 {
-      font-size: 2.5rem;
-      margin: 0 0 1.5rem;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-      line-height: 1.3;
-    }
-
-    .button {
-      display: inline-block;
-      background: var(--accent-blue);
+    /* Footer */
+    footer {
+      background: var(--dark-blue);
       color: var(--white);
-      padding: 0.8rem 2rem;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border: 2px solid transparent;
+      padding: 80px 0 30px;
     }
 
-    .button:hover {
-      background: var(--secondary-blue);
-      transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-      border-color: rgba(255, 255, 255, 0.2);
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 50px;
     }
 
-    /* ========== CONTENT SECTIONS ========== */
-    .container {
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 2.5rem;
-      background: var(--white);
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-    }
-
-    section {
-      margin-bottom: 2.5rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid #e2e8f0;
-    }
-
-    section:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    section h2 {
-      color: var(--primary-blue);
-      margin-bottom: 1.25rem;
-      font-size: 1.75rem;
+    .footer-column h4 {
+      color: var(--white);
+      margin-bottom: 25px;
+      font-size: 1.3rem;
       position: relative;
-      padding-bottom: 0.75rem;
+      padding-bottom: 10px;
     }
 
-    section h2::after {
+    .footer-column h4::after {
       content: '';
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 60px;
+      width: 50px;
       height: 3px;
-      background-color: var(--accent-blue);
-      border-radius: 2px;
+      background: var(--accent-blue);
     }
 
-    p, li {
-      font-size: 1.05rem;
-      color: var(--text-light);
-      line-height: 1.8;
-      margin-bottom: 1rem;
+    .footer-links {
+      list-style: none;
     }
 
-    a[href^="mailto"] {
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-links a:hover {
       color: var(--accent-blue);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
+      transform: translateX(5px);
     }
 
-    a[href^="mailto"]:hover {
-      color: var(--primary-blue);
-      text-decoration: underline;
+    .footer-social {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
     }
 
-    /* ========== FOOTER ========== */
-    footer {
-      background-color: var(--primary-blue);
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: var(--white);
-      padding: 2.5rem 1rem;
-      margin-top: 4rem;
+      transition: var(--transition);
     }
 
-    .footer-content {
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    footer p {
-      color: rgba(255, 255, 255, 0.85);
-      margin-bottom: 0.5rem;
-    }
-
-    footer a {
-      color: #fef3c7;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    footer a:hover {
-      color: var(--white);
-      text-decoration: underline;
+    .footer-social a:hover {
+      background: var(--accent-blue);
+      transform: translateY(-5px);
     }
 
     .copyright {
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
+      text-align: center;
+      padding-top: 30px;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 0.9rem;
       color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
     }
 
-    /* ========== RESPONSIVE BREAKPOINTS ========== */
-    @media (max-width: 1024px) {
-      .desktop-menu {
-        gap: 0.1rem;
-      }
-      
-      .desktop-menu a {
-        padding: 0.5rem 0.9rem;
-        font-size: 0.85rem;
-      }
+    /* Modal for Gallery */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
     }
 
-    @media (max-width: 900px) {
-      .desktop-nav {
-        display: none;
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      position: relative;
+    }
+
+    .modal-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--secondary-blue);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: var(--shadow-lg);
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 999;
+    }
+
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--primary-blue);
+      transform: translateY(-5px);
+    }
+
+    /* ========== RESPONSIVE DESIGN ========== */
+    @media (max-width: 992px) {
+      .hero-container {
+        flex-direction: column;
+        text-align: center;
       }
-      
-      .mobile-nav {
+
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .about-content,
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        z-index: 999;
+      }
+
+      .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .mobile-menu-btn {
         display: block;
       }
-      
-      .hero {
-        height: 320px;
+    }
+
+    @media (max-width: 768px) {
+      .section-title h2 {
+        font-size: 2rem;
       }
-      
+
       .hero-content h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
-      
-      .container {
-        margin: 2rem 1rem;
-        padding: 1.5rem;
+
+      .stats-container {
+        flex-direction: column;
+        gap: 30px;
       }
-      
-      section h2 {
-        font-size: 1.5rem;
+
+      .news-slider {
+        padding: 0 20px;
+      }
+
+      .contact-form {
+        padding: 25px;
       }
     }
 
-    @media (min-width: 901px) {
-      .mobile-nav {
-        display: none;
+    @media (max-width: 576px) {
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
       }
-      
-      .desktop-nav {
-        display: flex;
-      }
-    }
 
-    @media (max-width: 480px) {
-      .hero-content h1 {
-        font-size: 1.5rem;
+      .btn {
+        width: 100%;
+        max-width: 300px;
       }
-      
-      .button {
-        padding: 0.7rem 1.5rem;
-      }
-      
-      .mobile-menu-items a {
-        padding: 1rem;
-        font-size: 1rem;
+
+      .section {
+        padding: 70px 0;
       }
     }
   </style>
 </head>
-<body>
-  <!-- Desktop Navigation (Flat, Slim, Professional) -->
-  <nav class="desktop-nav">
-    <div class="logo-container">
-      <i class="fas fa-hands-helping logo-icon"></i>
-      <div class="logo-text">CAVITRD</div>
-    </div>
-    
-    <div class="desktop-menu">
-      <a href="index.html" class="active">
-        <i class="fas fa-home"></i> Home
-      </a>
-      <a href="about.html">
-        <i class="fas fa-info-circle"></i> About
-      </a>
-      <a href="team.html">
-        <i class="fas fa-users"></i> Our Team
-      </a>
-      <a href="projects.html">
-        <i class="fas fa-hands"></i> What We Do
-      </a>
-      <a href="news.html">
-        <i class="fas fa-newspaper"></i> News
-      </a>
-      <a href="contact.html">
-        <i class="fas fa-envelope"></i> Contact
-      </a>
-      <a href="volunteers.html">
-        <i class="fas fa-heart"></i> Volunteers
-      </a>
-    </div>
-    
-    <div class="language-switch">
-      <a href="index.html" class="active">EN</a>
-      <span style="color: #fef3c7;">|</span>
-      <a href="index-sw.html">SW</a>
-    </div>
-  </nav>
+<body class="english">
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i>
+  </a>
 
-  <!-- Mobile Navigation (Full-screen overlay) -->
-  <nav class="mobile-nav">
-    <div class="mobile-header">
-      <div class="mobile-logo">
-        <i class="fas fa-hands-helping"></i>
-        <span>CAVITRD</span>
+  <!-- Header -->
+  <header id="header">
+    <div class="container header-container">
+      <a href="#" class="logo" data-section="home">
+        <div class="logo-icon">
+          <i class="fas fa-hands-helping"></i>
+        </div>
+        <div class="logo-text">
+          <span class="english-content">CAVITRD</span>
+          <span class="swahili-content">CAVITRD</span>
+          <span class="english-content">Center for Assistance and Vision</span>
+          <span class="swahili-content">Kituo cha Usaidizi na Maono</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#" class="active" data-section="home"><i class="fas fa-home"></i> <span class="english-content">Home</span><span class="swahili-content">Nyumbani</span></a></li>
+          <li><a href="#" data-section="about"><i class="fas fa-info-circle"></i> <span class="english-content">About</span><span class="swahili-content">Kuhusu</span></a></li>
+          <li><a href="#" data-section="team"><i class="fas fa-users"></i> <span class="english-content">Our Team</span><span class="swahili-content">Timu Yetu</span></a></li>
+          <li><a href="#" data-section="projects"><i class="fas fa-hands"></i> <span class="english-content">What We Do</span><span class="swahili-content">Tunachofanya</span></a></li>
+          <li><a href="#" data-section="news"><i class="fas fa-newspaper"></i> <span class="english-content">News</span><span class="swahili-content">Habari</span></a></li>
+          <li><a href="#" data-section="volunteers"><i class="fas fa-heart"></i> <span class="english-content">Volunteers</span><span class="swahili-content">Wajitoleaji</span></a></li>
+          <li><a href="#" data-section="contact"><i class="fas fa-envelope"></i> <span class="english-content">Contact</span><span class="swahili-content">Wasiliana</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="language-switcher english" id="languageSwitcher">
+          <div class="active-lang"></div>
+          <button data-lang="english">EN</button>
+          <button data-lang="swahili">SW</button>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
-      <button class="menu-toggle" id="menuToggle">
-        <i class="fas fa-bars"></i>
-      </button>
     </div>
-  </nav>
-
-  <!-- Mobile Menu Overlay -->
-  <div class="mobile-menu-overlay" id="mobileMenu">
-    <div class="mobile-menu-header">
-      <div class="mobile-logo">
-        <i class="fas fa-hands-helping"></i>
-        <span>CAVITRD</span>
-      </div>
-      <button class="mobile-menu-close" id="menuClose">
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
-    
-    <div class="mobile-menu-items">
-      <a href="index.html" class="active">
-        <i class="fas fa-home"></i> Home
-      </a>
-      <a href="about.html">
-        <i class="fas fa-info-circle"></i> About
-      </a>
-      <a href="team.html">
-        <i class="fas fa-users"></i> Our Team
-      </a>
-      <a href="projects.html">
-        <i class="fas fa-hands"></i> What We Do
-      </a>
-      <a href="news.html">
-        <i class="fas fa-newspaper"></i> News
-      </a>
-      <a href="contact.html">
-        <i class="fas fa-envelope"></i> Contact
-      </a>
-      <a href="volunteers.html">
-        <i class="fas fa-heart"></i> Volunteers
-      </a>
-    </div>
-    
-    <div class="mobile-language-switch">
-      <a href="index.html" class="active">English (EN)</a>
-      <a href="index-sw.html">Swahili (SW)</a>
-    </div>
-  </div>
-
-  <!-- Hero Section -->
-  <div class="hero">
-    <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1350&q=80" alt="Children in Tanzania smiling" />
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Empowering Individuals with Disabilities in Tanzania's Lake Zone</h1>
-      <a href="projects.html" class="button">Join Our Mission</a>
-    </div>
-  </div>
+  </header>
 
   <!-- Main Content -->
-  <div class="container">
-    <section>
-      <h2>Our Mission</h2>
-      <p>CAVITRD is dedicated to enhancing the lives of children and adults living with disabilities across Tanzania's Lake Zone region. We strive to create sustainable impact through comprehensive support systems and community integration.</p>
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1 class="english-content">Empowering Individuals with Disabilities in Tanzania's Lake Zone</h1>
+          <h1 class="swahili-content">Kuwawezesha Watu Wenye Ulemavu Katika Ukanda wa Ziwa Tanzania</h1>
+          <p class="english-content">CAVITRD is dedicated to enhancing the lives of children and adults living with disabilities across Tanzania's Lake Zone region. We strive to create sustainable impact through comprehensive support systems and community integration.</p>
+          <p class="swahili-content">CAVITRD imejikita katika kuboresha maisha ya watoto na watu wazima wenye ulemavu katika eneo la Ukanda wa Ziwa Tanzania. Tunajitahidi kuunda athari endelevu kupitia mifumo ya usaidizi kamili na ujumuishaji wa jamii.</p>
+          <div class="hero-actions">
+            <a href="#" class="btn btn-primary" data-section="volunteers">
+              <i class="fas fa-handshake"></i>
+              <span class="english-content">Get Involved</span>
+              <span class="swahili-content">Jihusishe</span>
+            </a>
+            <a href="#" class="btn btn-secondary" data-section="projects">
+              <i class="fas fa-play-circle"></i>
+              <span class="english-content">Our Work</span>
+              <span class="swahili-content">Kazi Zetu</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1350&q=80" alt="Children in Tanzania smiling">
+        </div>
+      </div>
+      <div class="hero-wave">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+      </div>
+      <div class="container">
+        <div class="stats-container">
+          <div class="stat-item">
+            <span class="stat-number" data-count="500">0</span>
+            <span class="stat-label english-content">People Helped</span>
+            <span class="stat-label swahili-content">Waliokusudiwa</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="45">0</span>
+            <span class="stat-label english-content">Outreach Programs</span>
+            <span class="stat-label swahili-content">Mipango ya Ufikiaji</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="120">0</span>
+            <span class="stat-label english-content">Devices Provided</span>
+            <span class="stat-label swahili-content">Vifaa Vilivyotolewa</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="8">0</span>
+            <span class="stat-label english-content">Years of Service</span>
+            <span class="stat-label swahili-content">Miaka ya Huduma</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Our Work</h2>
-      <p>We provide essential services including surgical interventions, mobility assistance, and inclusive educational support for individuals with congenital or trauma-related disabilities. Our collaborative approach involves partnerships with local clinics, caregivers, and community leaders to reduce stigma and improve access to quality care.</p>
+    <!-- About Section -->
+    <section id="about" class="section" style="display: none;">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="english-content">About Us</h2>
+          <h2 class="swahili-content">Kuhusu Sisi</h2>
+        </div>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1579154204601-0151d5f4a0c8?auto=format&fit=crop&w=1350&q=80" alt="CAVITRD team working">
+          </div>
+          <div class="about-text">
+            <h3 class="english-content">Our Story & Mission</h3>
+            <h3 class="swahili-content">Historia Yetu na Misheni</h3>
+            <p class="english-content">CAVITRD is a registered Tanzanian NGO with Registration number <strong>14NGO/R/4896</strong>, dealing with children and adults with congenital or acquired anomalies, vision impairment, and trauma-related disabilities.</p>
+            <p class="swahili-content">CAVITRD ni ASHI iliyosajiliwa nchini Tanzania na nambari ya usajili <strong>14NGO/R/4896</strong>, inayoshughulikia watoto na watu wazima walio na kasoro za kuzaliwa, upofu, na ulemavu unaohusiana na majeraha.</p>
+            <p class="english-content">We work with children and adults with congenital or acquired anomalies, vision impairments, and trauma-related disabilities. Our efforts focus on rural communities, especially across the Lake Zone region of Tanzania.</p>
+            <p class="swahili-content">Tunafanya kazi na watoto na watu wazima walio na kasoro za kuzaliwa, upofu, na ulemavu unaohusiana na majeraha. Juhudi zetu zinalenga jamii za vijijini, hasa katika eneo la Ukanda wa Ziwa Tanzania.</p>
+          </div>
+        </div>
+        <div class="values-grid">
+          <div class="value-card">
+            <i class="fas fa-hand-holding-heart"></i>
+            <h4 class="english-content">Compassion</h4>
+            <h4 class="swahili-content">Huruma</h4>
+            <p class="english-content">We lead with empathy and care for every individual we serve.</p>
+            <p class="swahili-content">Tunaongoza kwa huruma na utunzaji kwa kila mtu tunayemhudumia.</p>
+          </div>
+          <div class="value-card">
+            <i class="fas fa-balance-scale"></i>
+            <h4 class="english-content">Equity</h4>
+            <h4 class="swahili-content">Usawa</h4>
+            <p class="english-content">We believe in fair access to opportunities and resources for all.</p>
+            <p class="swahili-content">Tunaamini katika upatikanaji wa haki wa fursa na rasilimali kwa wote.</p>
+          </div>
+          <div class="value-card">
+            <i class="fas fa-user-shield"></i>
+            <h4 class="english-content">Dignity</h4>
+            <h4 class="swahili-content">Heshima</h4>
+            <p class="english-content">We respect every individual's humanity and right to self-determination.</p>
+            <p class="swahili-content">Tunaheshimu ubinadamu wa kila mtu na haki yake ya kujiamulia.</p>
+          </div>
+          <div class="value-card">
+            <i class="fas fa-eye"></i>
+            <h4 class="english-content">Transparency</h4>
+            <h4 class="swahili-content">Uwazi</h4>
+            <p class="english-content">We act with honesty and openness in all our operations.</p>
+            <p class="swahili-content">Tunatenda kwa uaminifu na uwazi katika shughuli zetu zote.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Get In Touch</h2>
-      <p>For partnership opportunities, support inquiries, or general information, please contact us at: <a href="mailto:info@cavitrd.org">info@cavitrd.org</a></p>
+    <!-- Team Section -->
+    <section id="team" class="section" style="display: none;">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="english-content">Our Team</h2>
+          <h2 class="swahili-content">Timu Yetu</h2>
+        </div>
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="member-image">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="James Shimba">
+            </div>
+            <div class="member-info">
+              <h4>James Shimba</h4>
+              <span class="member-role english-content">Chairperson</span>
+              <span class="member-role swahili-content">Mwenyekiti</span>
+              <p class="english-content">Leading strategic direction and partnerships for CAVITRD.</p>
+              <p class="swahili-content">Akiongoza mwelekeo wa kimkakati na ushirikiano kwa CAVITRD.</p>
+              <div class="member-social">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="member-image">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80" alt="Irene Amati Chacha">
+            </div>
+            <div class="member-info">
+              <h4>Irene Amati Chacha</h4>
+              <span class="member-role english-content">Treasurer</span>
+              <span class="member-role swahili-content">Mweka Hazina</span>
+              <p class="english-content">Managing financial resources and ensuring transparency.</p>
+              <p class="swahili-content">Anasimamia rasilimali za kifedha na kuhakikisha uwazi.</p>
+              <div class="member-social">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="member-image">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80" alt="Aneth Ndelilo Mwenda">
+            </div>
+            <div class="member-info">
+              <h4>Aneth Ndelilo Mwenda</h4>
+              <span class="member-role english-content">Board Member</span>
+              <span class="member-role swahili-content">Mwanzilishi wa Bodi</span>
+              <p class="english-content">Overseeing program implementation and community engagement.</p>
+              <p class="swahili-content">Anasimamia utekelezaji wa programu na ushirikiano wa jamii.</p>
+              <div class="member-social">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-  </div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section" style="display: none;">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="english-content">What We Do</h2>
+          <h2 class="swahili-content">Tunachofanya</h2>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1576765607924-bb13f021d5fa?auto=format&fit=crop&w=800&q=80" alt="Awareness Campaigns">
+            </div>
+            <div class="project-content">
+              <h4 class="english-content">Awareness Campaigns</h4>
+              <h4 class="swahili-content">Kampeni za Sensitization</h4>
+              <p class="english-content">We conduct outreach and community workshops to reduce stigma and raise awareness on disability inclusion.</p>
+              <p class="swahili-content">Tunafanya ukumbi wa jamii na mafunzo ili kupunguza chuki na kuongeza ufahamu juu ya ujumuishaji wa ulemavu.</p>
+              <div class="project-tags">
+                <span class="project-tag">Education</span>
+                <span class="project-tag">Community</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1594824476967-cf2c6d4ac6de?auto=format&fit=crop&w=800&q=80" alt="Assistive Devices">
+            </div>
+            <div class="project-content">
+              <h4 class="english-content">Assistive Devices</h4>
+              <h4 class="swahili-content">Vifaa vya Kusaidia</h4>
+              <p class="english-content">We distribute wheelchairs, walkers, crutches, and other devices to children and adults in need.</p>
+              <p class="swahili-content">Tunasambaza viti vya magurudumu, vifaa vya kutembelea, mikongojo, na vifaa vingine kwa watoto na watu wazima wenye uhitaji.</p>
+              <div class="project-tags">
+                <span class="project-tag">Equipment</span>
+                <span class="project-tag">Support</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1578496479763-6e021c5e4e8a?auto=format&fit=crop&w=800&q=80" alt="Medical Support">
+            </div>
+            <div class="project-content">
+              <h4 class="english-content">Medical Support</h4>
+              <h4 class="swahili-content">Usaidizi wa Kimatibabu</h4>
+              <p class="english-content">We connect families with rehabilitation, physiotherapy, surgery, and clinical referrals for disability care.</p>
+              <p class="swahili-content">Tunaunganisha familia na upatikanaji wa tiba ya urekebishaji, fizikia, upasuaji, na rufaa za kliniki kwa utunzaji wa ulemavu.</p>
+              <div class="project-tags">
+                <span class="project-tag">Healthcare</span>
+                <span class="project-tag">Rehabilitation</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1601979031925-012d64d6b270?auto=format&fit=crop&w=800&q=80" alt="Caregiver Training">
+            </div>
+            <div class="project-content">
+              <h4 class="english-content">Caregiver Training</h4>
+              <h4 class="swahili-content">Mafunzo ya Walezi</h4>
+              <p class="english-content">We empower parents, caregivers, and health workers with training on inclusive care and home-based therapy.</p>
+              <p class="swahili-content">Tunawawezesha wazazi, walezi, na wafanyikazi wa afya kwa mafunzo juu ya utunzaji jumuishi na tiba ya nyumbani.</p>
+              <div class="project-tags">
+                <span class="project-tag">Training</span>
+                <span class="project-tag">Empowerment</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1616440231799-bf02dcafe5b3?auto=format&fit=crop&w=800&q=80" alt="Advocacy">
+            </div>
+            <div class="project-content">
+              <h4 class="english-content">Advocacy & Inclusion</h4>
+              <h4 class="swahili-content">Utetezi na Ujumuishaji</h4>
+              <p class="english-content">We work with leaders and institutions to push for inclusive policies in education, health, and community planning.</p>
+              <p class="swahili-content">Tunafanya kazi na viongozi na taasisi kusukuma sera za ujumuishaji katika elimu, afya, na upangaji wa jamii.</p>
+              <div class="project-tags">
+                <span class="project-tag">Advocacy</span>
+                <span class="project-tag">Policy</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Community Support">
+            </div>
+            <div class="project-content">
+              <h4 class="english-content">Community Support</h4>
+              <h4 class="swahili-content">Usaidizi wa Jamii</h4>
+              <p class="english-content">Building sustainable community support systems for long-term disability inclusion and support.</p>
+              <p class="swahili-content">Kujenga mifumo endelevu ya usaidizi wa jamii kwa ujumuishaji wa muda mrefu wa ulemavu na usaidizi.</p>
+              <div class="project-tags">
+                <span class="project-tag">Community</span>
+                <span class="project-tag">Sustainability</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="section" style="display: none;">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="english-content">News & Updates</h2>
+          <h2 class="swahili-content">Habari & Matukio</h2>
+        </div>
+        <div class="news-slider">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="news-card">
+                  <div class="news-date">
+                    <span class="english-content">May 2025</span>
+                    <span class="swahili-content">Mei 2025</span>
+                  </div>
+                  <div class="news-content">
+                    <h4 class="english-content">Inclusive Outreach for Children with Disabilities</h4>
+                    <h4 class="swahili-content">Ufikiaji Jumuishi kwa Watoto Wenye Ulemavu</h4>
+                    <p class="english-content">In May, our team reached 20+ children in Ilemela District living with mobility-related disabilities. We distributed 4 walkers, 2 crutches, and 2 wheelchairs.</p>
+                    <p class="swahili-content">Mwezi Mei, timu yetu ilifika watoto 20+ katika Wilaya ya Ilemela wanaoishi na ulemavu unaohusiana na uwezo wa kutembea. Tulisambaza vifaa 4 vya kutembelea, mikongojo 2, na viti 2 vya magurudumu.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="news-card">
+                  <div class="news-date">
+                    <span class="english-content">April 2025</span>
+                    <span class="swahili-content">Aprili 2025</span>
+                  </div>
+                  <div class="news-content">
+                    <h4 class="english-content">New Partnership for Medical Referrals</h4>
+                    <h4 class="swahili-content">Ushirikiano Mpya wa Rufaa za Matibabu</h4>
+                    <p class="english-content">CAVITRD partnered with Mwanza Health Center to provide surgical referrals and physiotherapy for children in need.</p>
+                    <p class="swahili-content">CAVITRD ilishirikiana na Kituo cha Afya cha Mwanza kutoa rufaa za upasuaji na fizikia kwa watoto wenye uhitaji.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="news-card">
+                  <div class="news-date">
+                    <span class="english-content">March 2025</span>
+                    <span class="swahili-content">Machi 2025</span>
+                  </div>
+                  <div class="news-content">
+                    <h4 class="english-content">Community Seminar on Disability Awareness</h4>
+                    <h4 class="swahili-content">Semina ya Jamii juu ya Ufahamu wa Ulemavu</h4>
+                    <p class="english-content">Our awareness seminar in Buswelu brought together 40+ participants including teachers, volunteers, and local leaders.</p>
+                    <p class="swahili-content">Semina yetu ya ufahamu huko Buswelu iliwaleta pamoja washiriki 40+ ikiwemo walimu, wajitoleaji, na viongozi wa kijiji.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Volunteers Section -->
+    <section id="volunteers" class="section" style="display: none;">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="english-content">Volunteer With Us</h2>
+          <h2 class="swahili-content">Jitolee Nasi</h2>
+        </div>
+        <div class="volunteer-options">
+          <div class="volunteer-option">
+            <div class="volunteer-icon">
+              <i class="fas fa-user-md"></i>
+            </div>
+            <h3 class="english-content">Medical Professionals</h3>
+            <h3 class="swahili-content">Wataalamu wa Matibabu</h3>
+            <p class="english-content">Join our medical outreach programs and provide specialized care to those in need.</p>
+            <p class="swahili-content">Jiunge na programu zetu za ufikiaji wa matibabu na toa huduma maalum kwa wale wenye uhitaji.</p>
+          </div>
+          <div class="volunteer-option">
+            <div class="volunteer-icon">
+              <i class="fas fa-hands-helping"></i>
+            </div>
+            <h3 class="english-content">Community Volunteers</h3>
+            <h3 class="swahili-content">Wajitoleaji wa Jamii</h3>
+            <p class="english-content">Help with awareness campaigns, community mobilization, and support services.</p>
+            <p class="swahili-content">Saidia na kampeni za ufahamu, uhamasishaji wa jamii, na huduma za usaidizi.</p>
+          </div>
+          <div class="volunteer-option">
+            <div class="volunteer-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="english-content">Students & Interns</h3>
+            <h3 class="swahili-content">Wanafunzi na Wafanyakazi wa Mafunzo</h3>
+            <p class="english-content">Gain practical experience while contributing to meaningful community work.</p>
+            <p class="swahili-content">Pata uzoefu wa vitendo huku ukichangia kazi yenye maana ya jamii.</p>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3 class="english-content" style="margin-bottom: 30px; color: var(--primary-blue);">Volunteer Application Form</h3>
+          <h3 class="swahili-content" style="margin-bottom: 30px; color: var(--primary-blue);">Fomu ya Maombi ya Kujitolea</h3>
+          <form id="volunteerForm" action="https://formsubmit.co/info@cavitrd.org" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New Volunteer Application">
+            <input type="hidden" name="_template" value="table">
+            <div class="form-group">
+              <label for="fullName" class="english-content">Full Name</label>
+              <label for="fullName" class="swahili-content">Jina Kamili</label>
+              <input type="text" id="fullName" name="Full Name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="english-content">Email Address</label>
+              <label for="email" class="swahili-content">Anwani ya Barua Pepe</label>
+              <input type="email" id="email" name="Email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="phone" class="english-content">Phone Number</label>
+              <label for="phone" class="swahili-content">Nambari ya Simu</label>
+              <input type="tel" id="phone" name="Phone" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="specialization" class="english-content">Specialization / Skills</label>
+              <label for="specialization" class="swahili-content">Utaalamu / Ujuzi</label>
+              <input type="text" id="specialization" name="Specialization" class="form-control" placeholder="e.g., Surgeon, Nurse, Community Worker" required>
+            </div>
+            <div class="form-group">
+              <label for="message" class="english-content">Why do you want to volunteer with us?</label>
+              <label for="message" class="swahili-content">Kwa nini unataka kujitolea nasi?</label>
+              <textarea id="message" name="Message" class="form-control" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="fas fa-paper-plane"></i>
+              <span class="english-content">Submit Application</span>
+              <span class="swahili-content">Wasilisha Ombi</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" style="display: none;">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="english-content">Contact Us</h2>
+          <h2 class="swahili-content">Wasiliana Nasi</h2>
+        </div>
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h4 class="english-content">Our Location</h4>
+                <h4 class="swahili-content">Eneo LETU</h4>
+                <p>Mwanza, Tanzania<br>Lake Zone Region</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h4 class="english-content">Email Address</h4>
+                <h4 class="swahili-content">Anwani ya Barua Pepe</h4>
+                <p><a href="mailto:info@cavitrd.org" style="color: var(--secondary-blue);">info@cavitrd.org</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h4 class="english-content">Phone Number</h4>
+                <h4 class="swahili-content">Nambari ya Simu</h4>
+                <p>+255 000 000 000</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div>
+                <h4 class="english-content">Office Hours</h4>
+                <h4 class="swahili-content">Saa za Ofisi</h4>
+                <p class="english-content">Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 1:00 PM</p>
+                <p class="swahili-content">Jumatatu - Ijumaa: 8:00 asubuhi - 5:00 jioni<br>Jumamosi: 9:00 asubuhi - 1:00 jioni</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-share-alt"></i>
+              </div>
+              <div>
+                <h4 class="english-content">Follow Us</h4>
+                <h4 class="swahili-content">Tufuate</h4>
+                <div class="footer-social">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <h3 class="english-content" style="margin-bottom: 30px; color: var(--primary-blue);">Send Us a Message</h3>
+            <h3 class="swahili-content" style="margin-bottom: 30px; color: var(--primary-blue);">Tutumie Ujumbe</h3>
+            <iframe aria-label='Newsletter Signup' frameborder="0" style="height:500px;width:100%;border:none;" src='https://forms.zohopublic.com/infocav1/form/NewsletterSignup/formperma/0yIiZTJj66LkVrglBEpa5t6oLMmS5Y0wKPs8LzjyuGU'></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section (Hidden but accessible) -->
+    <section id="gallery" class="section" style="display: none;">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="english-content">Our Gallery</h2>
+          <h2 class="swahili-content">Galeri Yetu</h2>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item" data-image="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80">
+            <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80" alt="Community Outreach">
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div class="gallery-item" data-image="https://images.unsplash.com/photo-1579154204601-0151d5f4a0c8?auto=format&fit=crop&w=800&q=80">
+            <img src="https://images.unsplash.com/photo-1579154204601-0151d5f4a0c8?auto=format&fit=crop&w=800&q=80" alt="Team Work">
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div class="gallery-item" data-image="https://images.unsplash.com/photo-1578496479763-6e021c5e4e8a?auto=format&fit=crop&w=800&q=80">
+            <img src="https://images.unsplash.com/photo-1578496479763-6e021c5e4e8a?auto=format&fit=crop&w=800&q=80" alt="Medical Support">
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div class="gallery-item" data-image="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Community Meeting">
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer>
-    <div class="footer-content">
-      <p><strong>CAVITRD</strong> | Mwanza, Tanzania</p>
-      <p>Email: <a href="mailto:info@cavitrd.org">info@cavitrd.org</a></p>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h4 class="english-content">About CAVITRD</h4>
+          <h4 class="swahili-content">Kuhusu CAVITRD</h4>
+          <p class="english-content" style="color: rgba(255, 255, 255, 0.8); margin-top: 15px;">A registered Tanzanian NGO dedicated to empowering individuals with disabilities in the Lake Zone region.</p>
+          <p class="swahili-content" style="color: rgba(255, 255, 255, 0.8); margin-top: 15px;">ASHI iliyosajiliwa nchini Tanzania inayojitolea kuwawezesha watu wenye ulemavu katika eneo la Ukanda wa Ziwa.</p>
+        </div>
+        <div class="footer-column">
+          <h4 class="english-content">Quick Links</h4>
+          <h4 class="swahili-content">Viungo vya Haraka</h4>
+          <ul class="footer-links">
+            <li><a href="#" data-section="home"><i class="fas fa-chevron-right"></i> <span class="english-content">Home</span><span class="swahili-content">Nyumbani</span></a></li>
+            <li><a href="#" data-section="about"><i class="fas fa-chevron-right"></i> <span class="english-content">About Us</span><span class="swahili-content">Kuhusu Sisi</span></a></li>
+            <li><a href="#" data-section="projects"><i class="fas fa-chevron-right"></i> <span class="english-content">Our Projects</span><span class="swahili-content">Miradi Yetu</span></a></li>
+            <li><a href="#" data-section="volunteers"><i class="fas fa-chevron-right"></i> <span class="english-content">Volunteer</span><span class="swahili-content">Jitolea</span></a></li>
+            <li><a href="#" data-section="contact"><i class="fas fa-chevron-right"></i> <span class="english-content">Contact</span><span class="swahili-content">Wasiliana</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 class="english-content">Contact Info</h4>
+          <h4 class="swahili-content">Taarifa za Mawasiliano</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:info@cavitrd.org"><i class="fas fa-envelope"></i> info@cavitrd.org</a></li>
+            <li><a href="tel:+255000000000"><i class="fas fa-phone"></i> +255 000 000 000</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Mwanza, Tanzania</a></li>
+          </ul>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/CAVITRD" target="_blank"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4 class="english-content">Newsletter</h4>
+          <h4 class="swahili-content">Barua pepe ya Habari</h4>
+          <p class="english-content" style="color: rgba(255, 255, 255, 0.8); margin-top: 15px;">Subscribe to our newsletter for updates on our work and opportunities to get involved.</p>
+          <p class="swahili-content" style="color: rgba(255, 255, 255, 0.8); margin-top: 15px;">Jiandikishe kwa barua pepe yetu ya habari kwa sasisho juu ya kazi yetu na fursa za kujihusisha.</p>
+        </div>
+      </div>
       <div class="copyright">
-        &copy; 2024 Center for Assistance and Vision for Tanzania's Rural Disabled. All rights reserved.
+        <p>&copy; 2024 CAVITRD - Center for Assistance and Vision for Tanzania's Rural Disabled. All rights reserved.</p>
+        <p class="swahili-content">&copy; 2024 CAVITRD - Kituo cha Usaidizi na Maono kwa Watu Wenye Ulemavu Vijijini Tanzania. Haki zote zimehifadhiwa.</p>
       </div>
     </div>
   </footer>
 
+  <!-- Gallery Modal -->
+  <div class="modal" id="galleryModal">
+    <button class="modal-close" id="modalClose">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="">
+    </div>
+  </div>
+
+  <!-- Thank You Modal (for form submission) -->
+  <div class="modal" id="thankYouModal">
+    <div class="modal-content" style="background: white; padding: 50px; border-radius: 15px; text-align: center; max-width: 500px;">
+      <button class="modal-close" id="thankYouClose" style="top: 10px; right: 10px;">
+        <i class="fas fa-times"></i>
+      </button>
+      <div style="font-size: 4rem; color: var(--success); margin-bottom: 20px;">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <h2 style="color: var(--primary-blue); margin-bottom: 15px;" class="english-content">Thank You!</h2>
+      <h2 style="color: var(--primary-blue); margin-bottom: 15px;" class="swahili-content">Asante!</h2>
+      <p class="english-content" style="margin-bottom: 30px; color: var(--text-light);">Your application has been submitted successfully. We will contact you soon.</p>
+      <p class="swahili-content" style="margin-bottom: 30px; color: var(--text-light);">Ombi lako limewasilishwa kikamilifu. Tutawasiliana nawe hivi karibuni.</p>
+      <button class="btn btn-primary" id="closeThankYou">
+        <span class="english-content">Close</span>
+        <span class="swahili-content">Funga</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    // Mobile menu toggle functionality
-    const menuToggle = document.getElementById('menuToggle');
-    const menuClose = document.getElementById('menuClose');
-    const mobileMenu = document.getElementById('mobileMenu');
+    // DOM Elements
     const body = document.body;
+    const header = document.getElementById('header');
+    const backToTop = document.getElementById('backToTop');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    const languageSwitcher = document.getElementById('languageSwitcher');
+    const navItems = document.querySelectorAll('.nav-links a');
+    const sections = document.querySelectorAll('section');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const galleryModal = document.getElementById('galleryModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalClose = document.getElementById('modalClose');
+    const thankYouModal = document.getElementById('thankYouModal');
+    const volunteerForm = document.getElementById('volunteerForm');
+    const thankYouClose = document.getElementById('thankYouClose');
+    const closeThankYou = document.getElementById('closeThankYou');
 
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
-      body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+    // Initialize Swiper
+    const swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
     });
 
-    menuClose.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-      body.style.overflow = 'auto';
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('header-scrolled');
+        backToTop.classList.add('active');
+      } else {
+        header.classList.remove('header-scrolled');
+        backToTop.classList.remove('active');
+      }
     });
 
-    // Close menu when clicking on links
-    const mobileLinks = document.querySelectorAll('.mobile-menu-items a');
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        body.style.overflow = 'auto';
+    // Mobile menu toggle
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+    });
+
+    // Language switching
+    languageSwitcher.addEventListener('click', (e) => {
+      if (e.target.tagName === 'BUTTON') {
+        const lang = e.target.dataset.lang;
+        body.className = lang;
+        languageSwitcher.className = `language-switcher ${lang}`;
+        
+        // Update active section title based on language
+        const activeSection = document.querySelector('section:not([style*="display: none"])');
+        if (activeSection) {
+          const sectionTitle = activeSection.querySelector('.section-title h2');
+          if (sectionTitle) {
+            // Trigger a small animation when language changes
+            sectionTitle.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+              sectionTitle.style.transform = 'scale(1)';
+            }, 200);
+          }
+        }
+      }
+    });
+
+    // Navigation
+    navItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const sectionId = item.dataset.section;
+        
+        // Update active nav item
+        navItems.forEach(navItem => navItem.classList.remove('active'));
+        item.classList.add('active');
+        
+        // Hide all sections
+        sections.forEach(section => {
+          section.style.display = 'none';
+        });
+        
+        // Show selected section
+        document.getElementById(sectionId).style.display = 'block';
+        
+        // Close mobile menu if open
+        navLinks.classList.remove('active');
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        
+        // Scroll to top of section
+        window.scrollTo({
+          top: sectionId === 'home' ? 0 : header.offsetHeight,
+          behavior: 'smooth'
+        });
       });
     });
 
-    // Close menu when clicking outside
-    mobileMenu.addEventListener('click', (e) => {
-      if (e.target === mobileMenu) {
-        mobileMenu.classList.remove('active');
+    // Gallery modal
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const imageSrc = item.dataset.image;
+        modalImage.src = imageSrc;
+        galleryModal.classList.add('active');
+        body.style.overflow = 'hidden';
+      });
+    });
+
+    modalClose.addEventListener('click', () => {
+      galleryModal.classList.remove('active');
+      body.style.overflow = 'auto';
+    });
+
+    galleryModal.addEventListener('click', (e) => {
+      if (e.target === galleryModal) {
+        galleryModal.classList.remove('active');
         body.style.overflow = 'auto';
       }
+    });
+
+    // Form submission
+    if (volunteerForm) {
+      volunteerForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Show loading state
+        const submitBtn = volunteerForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span class="english-content">Submitting...</span><span class="swahili-content">Inawasilisha...</span>';
+        submitBtn.disabled = true;
+        
+        // Simulate form submission
+        setTimeout(() => {
+          // Show thank you modal
+          thankYouModal.classList.add('active');
+          body.style.overflow = 'hidden';
+          
+          // Reset form
+          volunteerForm.reset();
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+        }, 1500);
+      });
+    }
+
+    // Close thank you modal
+    thankYouClose.addEventListener('click', () => {
+      thankYouModal.classList.remove('active');
+      body.style.overflow = 'auto';
+    });
+
+    closeThankYou.addEventListener('click', () => {
+      thankYouModal.classList.remove('active');
+      body.style.overflow = 'auto';
+    });
+
+    thankYouModal.addEventListener('click', (e) => {
+      if (e.target === thankYouModal) {
+        thankYouModal.classList.remove('active');
+        body.style.overflow = 'auto';
+      }
+    });
+
+    // Animate statistics
+    function animateStats() {
+      const statNumbers = document.querySelectorAll('.stat-number');
+      
+      statNumbers.forEach(stat => {
+        const target = parseInt(stat.dataset.count);
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+        
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          stat.textContent = Math.floor(current);
+        }, 16);
+      });
+    }
+
+    // Initialize stats animation when hero section is in view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateStats();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) observer.observe(heroSection);
+
+    // Back to top functionality
+    backToTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Initialize with home section active
+    window.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('home').style.display = 'block';
     });
   </script>
 </body>
