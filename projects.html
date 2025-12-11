@@ -1083,7 +1083,7 @@
                     
                     <div class="camps-stats">
                         <div class="camp-stat">
-                            <div class="camp-stat-number" data-count="1500">0</div>
+                            <div class="camp-stat-number" data-count="1424">0</div>
                             <div class="camp-stat-text" id="surgicalStat1">Surgeries Performed</div>
                         </div>
                         <div class="camp-stat">
@@ -1186,7 +1186,7 @@
                     <div class="impact-icon">
                         <i class="fas fa-hospital-user"></i>
                     </div>
-                    <div class="impact-number" data-count="1500">0</div>
+                    <div class="impact-number" data-count="1424">0</div>
                     <h3 id="impact1Title">Surgical Procedures</h3>
                     <p id="impact1Text">Life-changing surgeries performed</p>
                 </div>
@@ -1195,7 +1195,7 @@
                     <div class="impact-icon">
                         <i class="fas fa-eye"></i>
                     </div>
-                    <div class="impact-number" data-count="3000">0</div>
+                    <div class="impact-number" data-count="2670">0</div>
                     <h3 id="impact2Title">Vision Screenings</h3>
                     <p id="impact2Text">Individuals screened for vision issues</p>
                 </div>
@@ -1204,7 +1204,7 @@
                     <div class="impact-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <div class="impact-number" data-count="50000">0</div>
+                    <div class="impact-number" data-count="44500">0</div>
                     <h3 id="impact3Title">People Reached</h3>
                     <p id="impact3Text">Through education and awareness programs</p>
                 </div>
@@ -1280,7 +1280,6 @@
                         <li><a href="projects.html#surgical"><i class="fas fa-chevron-right"></i> Surgical Camps</a></li>
                         <li><a href="projects.html#vision"><i class="fas fa-chevron-right"></i> Vision Care</a></li>
                         <li><a href="projects.html#education"><i class="fas fa-chevron-right"></i> Community Education</a></li>
-                        <li><a href="projects.html#rehabilitation"><i class="fas fa-chevron-right"></i> Rehabilitation</a></li>
                     </ul>
                 </div>
                 
@@ -1343,20 +1342,20 @@
             const speed = 200;
 
             counters.forEach(counter => {
-                const animate = () => {
-                    const target = +counter.getAttribute('data-count');
-                    const count = +counter.innerText.replace(/,/g, '');
-                    const increment = target / speed;
+                const target = +counter.getAttribute('data-count');
+                const count = +counter.innerText.replace(/,/g, '');
+                const increment = target / speed;
 
+                const updateCounter = () => {
                     if (count < target) {
                         counter.innerText = Math.ceil(count + increment).toLocaleString();
-                        setTimeout(animate, 20);
+                        setTimeout(updateCounter, 20);
                     } else {
                         counter.innerText = target.toLocaleString();
                     }
                 };
 
-                animate();
+                updateCounter();
             });
         };
 
