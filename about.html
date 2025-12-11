@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAVITRD | Transforming Lives Through Compassionate Care</title>
+    <title>About Us | CAVITRD - Our Vision, Mission & Values</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -125,17 +125,6 @@
 
         .btn-secondary:hover {
             background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .btn-outline:hover {
-            background: var(--primary);
-            color: var(--white);
         }
 
         .section-header {
@@ -332,14 +321,13 @@
             cursor: pointer;
         }
 
-        /* === Premium Hero Section === */
-        .premium-hero {
-            min-height: 100vh;
+        /* === Page Hero === */
+        .page-hero {
+            min-height: 70vh;
             background: linear-gradient(135deg, rgba(12, 74, 110, 0.9) 0%, rgba(14, 165, 233, 0.85) 100%), 
                         url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             display: flex;
             align-items: center;
             position: relative;
@@ -347,11 +335,12 @@
             padding-top: 120px;
         }
 
-        .hero-bg-pattern {
+        .page-hero::before {
+            content: '';
             position: absolute;
             width: 100%;
             height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
             animation: float 60s linear infinite;
             z-index: 1;
         }
@@ -361,7 +350,7 @@
             100% { transform: translate(-100px, -100px) rotate(360deg); }
         }
 
-        .hero-content {
+        .page-hero-content {
             position: relative;
             z-index: 2;
             max-width: 900px;
@@ -369,110 +358,34 @@
             text-align: center;
         }
 
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .page-hero h1 {
+            font-size: 5rem;
             color: var(--white);
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-size: 0.9rem;
-        }
-
-        .hero-badge i {
-            color: var(--secondary);
-        }
-
-        .hero-content h1 {
-            font-size: 5.5rem;
-            color: var(--white);
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             line-height: 1.1;
             text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
-        .hero-content p {
+        .page-hero p {
             font-size: 1.4rem;
             color: rgba(255, 255, 255, 0.95);
-            margin-bottom: 60px;
             max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto 50px;
         }
 
-        .hero-btns {
-            display: flex;
-            gap: 25px;
-            justify-content: center;
-            margin-bottom: 100px;
+        /* === About Intro Section === */
+        .about-intro {
+            background: var(--white);
         }
 
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 80px;
-            margin-top: 80px;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
-            text-align: center;
-            position: relative;
-        }
-
-        .stat-item::before {
-            content: '';
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: -1;
-        }
-
-        .stat-number {
-            font-size: 4.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #ffffff 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-            font-family: 'Poppins', sans-serif;
-            line-height: 1;
-        }
-
-        .stat-text {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.9);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 600;
-        }
-
-        /* === About Section === */
-        .premium-about {
-            background: var(--light);
-            position: relative;
-        }
-
-        .about-container {
+        .intro-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 100px;
+            gap: 80px;
             align-items: center;
         }
 
-        .about-image {
+        .intro-image {
             position: relative;
             border-radius: var(--radius-xl);
             overflow: hidden;
@@ -481,22 +394,22 @@
             transition: var(--transition);
         }
 
-        .about-image:hover {
+        .intro-image:hover {
             transform: perspective(1000px) rotateY(0deg);
         }
 
-        .about-image img {
+        .intro-image img {
             width: 100%;
             height: auto;
             display: block;
             transition: var(--transition);
         }
 
-        .about-image:hover img {
+        .intro-image:hover img {
             transform: scale(1.05);
         }
 
-        .about-image::before {
+        .intro-image::before {
             content: '';
             position: absolute;
             width: 100px;
@@ -508,80 +421,20 @@
             z-index: 1;
         }
 
-        .about-image::after {
-            content: '';
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            bottom: -80px;
-            right: -80px;
-            opacity: 0.3;
-        }
-
-        .about-content h2 {
-            font-size: 3.5rem;
-            margin-bottom: 30px;
-            color: var(--primary);
-        }
-
-        .about-features {
-            margin-top: 50px;
-        }
-
-        .feature-card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: var(--shadow-sm);
-            border-left: 5px solid var(--secondary);
-            transition: var(--transition);
-        }
-
-        .feature-card:hover {
-            transform: translateX(10px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .feature-card h3 {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .feature-card i {
-            color: var(--secondary);
-            font-size: 1.5rem;
-        }
-
-        /* === Mission Section === */
-        .premium-mission {
+        /* === Vision & Mission Section === */
+        .vision-mission {
             background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
             position: relative;
             overflow: hidden;
         }
 
-        .mission-bg {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230c4a6e' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            z-index: 1;
-        }
-
-        .mission-container {
-            position: relative;
-            z-index: 2;
+        .vm-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 40px;
         }
 
-        .mission-card {
+        .vm-card {
             background: var(--white);
             border-radius: var(--radius-xl);
             padding: 60px 40px;
@@ -592,12 +445,12 @@
             overflow: hidden;
         }
 
-        .mission-card:hover {
+        .vm-card:hover {
             transform: translateY(-20px);
             box-shadow: var(--shadow-xl);
         }
 
-        .mission-card::before {
+        .vm-card::before {
             content: '';
             position: absolute;
             width: 100%;
@@ -607,7 +460,7 @@
             left: 0;
         }
 
-        .mission-icon {
+        .vm-icon {
             width: 100px;
             height: 100px;
             background: var(--gradient-primary);
@@ -621,17 +474,57 @@
             box-shadow: var(--shadow-lg);
         }
 
-        .mission-card h3 {
+        .vm-card h3 {
             font-size: 2rem;
             margin-bottom: 25px;
             color: var(--primary);
         }
 
+        /* === Objectives Section === */
+        .objectives-section {
+            background: var(--white);
+        }
+
+        .objectives-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+        }
+
+        .objective-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: var(--radius-xl);
+            padding: 50px 40px;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .objective-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .objective-number {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 5rem;
+            font-weight: 800;
+            color: rgba(12, 74, 110, 0.1);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .objective-content h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
         /* === Values Section === */
-        .premium-values {
+        .values-section {
             background: var(--gradient-dark);
             color: var(--white);
-            position: relative;
         }
 
         .values-container {
@@ -674,8 +567,65 @@
             font-size: 1.8rem;
         }
 
+        /* === History Section === */
+        .history-section {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+        }
+
+        .history-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .history-timeline {
+            position: relative;
+            margin-top: 60px;
+            padding: 40px 0;
+        }
+
+        .history-timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-primary);
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 45%;
+            margin-bottom: 60px;
+            padding: 30px;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 55%;
+        }
+
+        .timeline-year {
+            display: inline-block;
+            background: var(--gradient-gold);
+            color: var(--dark);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
         /* === CTA Section === */
-        .premium-cta {
+        .about-cta {
             background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
             color: var(--dark);
             text-align: center;
@@ -683,30 +633,16 @@
             overflow: hidden;
         }
 
-        .cta-container {
-            position: relative;
-            z-index: 2;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .cta-container h2 {
+        .about-cta h2 {
             font-size: 4.5rem;
             color: var(--dark);
             margin-bottom: 30px;
         }
 
-        .cta-container p {
+        .about-cta p {
             font-size: 1.5rem;
             margin-bottom: 60px;
             opacity: 0.95;
-        }
-
-        .cta-btns {
-            display: flex;
-            gap: 25px;
-            justify-content: center;
-            flex-wrap: wrap;
         }
 
         /* === Footer === */
@@ -814,19 +750,8 @@
         }
 
         /* === Responsive Design === */
-        @media (max-width: 1400px) {
-            .container {
-                max-width: 1200px;
-                padding: 0 30px;
-            }
-            
-            .hero-content h1 {
-                font-size: 4.5rem;
-            }
-        }
-
         @media (max-width: 1200px) {
-            .hero-content h1 {
+            .page-hero h1 {
                 font-size: 4rem;
             }
             
@@ -834,16 +759,12 @@
                 font-size: 3.5rem;
             }
             
-            .about-container {
+            .intro-container {
                 gap: 60px;
             }
         }
 
         @media (max-width: 992px) {
-            .container {
-                padding: 0 25px;
-            }
-            
             .nav-links {
                 display: none;
             }
@@ -852,12 +773,21 @@
                 display: block;
             }
             
-            .hero-content h1 {
+            .page-hero h1 {
                 font-size: 3.5rem;
             }
             
-            .about-container {
+            .intro-container {
                 grid-template-columns: 1fr;
+                gap: 60px;
+            }
+            
+            .section-header h2 {
+                font-size: 3rem;
+            }
+            
+            .about-cta h2 {
+                font-size: 3.5rem;
             }
             
             .footer-container {
@@ -865,12 +795,19 @@
                 gap: 40px;
             }
             
-            .section-header h2 {
-                font-size: 3rem;
+            .objectives-container {
+                grid-template-columns: 1fr;
             }
             
-            .cta-container h2 {
-                font-size: 3.5rem;
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                width: 90%;
+                left: 5%;
+                text-align: center;
+            }
+            
+            .history-timeline::before {
+                left: 30px;
             }
         }
 
@@ -879,42 +816,24 @@
                 padding: 100px 0;
             }
             
-            .hero-content h1 {
+            .page-hero h1 {
                 font-size: 3rem;
             }
             
-            .hero-content p {
+            .page-hero p {
                 font-size: 1.2rem;
-            }
-            
-            .hero-btns {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 300px;
             }
             
             .section-header h2 {
                 font-size: 2.5rem;
             }
             
-            .about-content h2 {
-                font-size: 2.8rem;
-            }
-            
-            .cta-container h2 {
+            .about-cta h2 {
                 font-size: 3rem;
             }
             
-            .stat-number {
-                font-size: 3.5rem;
-            }
-            
-            .hero-stats {
-                gap: 40px;
+            .vm-container {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -923,7 +842,7 @@
                 padding: 0 20px;
             }
             
-            .hero-content h1 {
+            .page-hero h1 {
                 font-size: 2.5rem;
             }
             
@@ -931,11 +850,7 @@
                 font-size: 2.2rem;
             }
             
-            .about-content h2 {
-                font-size: 2.3rem;
-            }
-            
-            .cta-container h2 {
+            .about-cta h2 {
                 font-size: 2.5rem;
             }
             
@@ -943,12 +858,8 @@
                 grid-template-columns: 1fr;
             }
             
-            .stat-number {
-                font-size: 3rem;
-            }
-            
-            .hero-stats {
-                gap: 30px;
+            .objective-card {
+                padding: 40px 20px;
             }
         }
     </style>
@@ -972,8 +883,8 @@
             </button>
             
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
                 <li><a href="team.html">Our Team</a></li>
                 <li><a href="projects.html">What We Do</a></li>
                 <li><a href="news.html">News</a></li>
@@ -987,144 +898,105 @@
         </div>
     </nav>
 
-    <!-- Premium Hero Section -->
-    <section class="premium-hero" id="hero">
-        <div class="hero-bg-pattern"></div>
+    <!-- Page Hero -->
+    <section class="page-hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge" id="heroBadge">
-                    <i class="fas fa-certificate"></i>
-                    <span>Registered NGO Since 2017</span>
-                </div>
-                
-                <h1 id="heroTitle">Transforming Lives Through Compassionate Care</h1>
-                
-                <p id="heroText">CAVITRD is a registered Tanzanian NGO (Registration No. <strong>14NGO/R/4896</strong>), dedicated to supporting children and adults with congenital or acquired anomalies, vision impairment, and trauma-related disabilities across the Lake Zone region.</p>
-                
-                <div class="hero-btns">
-                    <a href="about.html" class="btn btn-primary">
-                        <i class="fas fa-play-circle"></i>
-                        <span>Our Mission</span>
-                    </a>
-                    <a href="contact.html" class="btn btn-secondary">
-                        <i class="fas fa-handshake"></i>
-                        <span>Get Involved</span>
-                    </a>
-                </div>
-                
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="1500">0</div>
-                        <div class="stat-text" id="stat1">Surgeries Supported</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="48">0</div>
-                        <div class="stat-text" id="stat2">Communities Reached</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="5000">0</div>
-                        <div class="stat-text" id="stat3">Lives Transformed</div>
-                    </div>
-                </div>
+            <div class="page-hero-content">
+                <h1 id="pageTitle">About CAVITRD</h1>
+                <p id="pageSubtitle">A registered Tanzanian NGO with Registration number <strong>14NGO/R/4896</strong>, dealing with children and adults with congenital or acquired anomalies, vision impairment, and trauma-related disabilities.</p>
+                <a href="#about" class="btn btn-primary">
+                    <i class="fas fa-arrow-down"></i>
+                    <span>Our Story</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Premium About Section -->
-    <section class="premium-about" id="about">
+    <!-- About Introduction -->
+    <section class="about-intro" id="about">
         <div class="container">
-            <div class="section-header">
-                <h2 id="aboutTitle">Our Commitment to Excellence</h2>
-                <p id="aboutSubtitle">Providing specialized care and support to those who need it most</p>
-            </div>
-            
-            <div class="about-container">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="CAVITRD team in action">
+            <div class="intro-container">
+                <div class="intro-image">
+                    <img src="https://images.unsplash.com/photo-1516549655669-df6654e435f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="CAVITRD team helping children">
                 </div>
                 
-                <div class="about-content">
-                    <h2>Making a Difference in Tanzania</h2>
-                    <p id="aboutText1">We work with children and adults with congenital or acquired anomalies, vision impairments, and trauma-related disabilities. Our efforts focus on rural communities, especially across the Lake Zone region of Tanzania.</p>
+                <div class="intro-content">
+                    <h2 id="aboutTitle">Who We Are</h2>
+                    <p id="aboutText1"><strong>CAVITRD</strong> is a registered Tanzanian NGO with Registration number <strong>14NGO/R/4896</strong>, dealing with children and adults with congenital or acquired anomalies, vision impairment, and trauma-related disabilities.</p>
+                    <p id="aboutText2">We work with children and adults with congenital or acquired anomalies, vision impairments, and trauma-related disabilities. Our efforts focus on rural communities, especially across the Lake Zone region of Tanzania.</p>
+                    <p id="aboutText3">Through organized surgical camps, community education, and comprehensive support services, we strive to create lasting positive change in the lives of those we serve.</p>
                     
-                    <div class="about-features">
-                        <div class="feature-card">
-                            <h3>
-                                <i class="fas fa-stethoscope"></i>
-                                <span id="feature1Title">Surgical Outreach</span>
-                            </h3>
-                            <p id="feature1Text">Organized surgical camps providing life-changing procedures in remote areas.</p>
-                        </div>
-                        
-                        <div class="feature-card">
-                            <h3>
-                                <i class="fas fa-eye"></i>
-                                <span id="feature2Title">Vision Care Services</span>
-                            </h3>
-                            <p id="feature2Text">Comprehensive vision impairment support including screening and treatment.</p>
-                        </div>
-                        
-                        <div class="feature-card">
-                            <h3>
-                                <i class="fas fa-users"></i>
-                                <span id="feature3Title">Community Education</span>
-                            </h3>
-                            <p id="feature3Text">Awareness programs on prevention and available treatment options.</p>
-                        </div>
-                    </div>
-                    
-                    <a href="projects.html" class="btn btn-outline" style="margin-top: 30px;">
+                    <a href="#vision" class="btn btn-outline" style="margin-top: 30px;">
                         <i class="fas fa-arrow-right"></i>
-                        <span>View All Programs</span>
+                        <span>Our Vision & Mission</span>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Premium Mission Section -->
-    <section class="premium-mission" id="mission">
-        <div class="mission-bg"></div>
+    <!-- Vision & Mission Section -->
+    <section class="vision-mission" id="vision">
         <div class="container">
             <div class="section-header">
-                <h2 id="missionTitle">Our Vision & Mission</h2>
-                <p id="missionSubtitle">The guiding principles that shape everything we do</p>
+                <h2 id="vmTitle">Our Vision & Mission</h2>
+                <p id="vmSubtitle">The guiding principles that drive our work and define our purpose</p>
             </div>
             
-            <div class="mission-container">
-                <div class="mission-card">
-                    <div class="mission-icon">
+            <div class="vm-container">
+                <div class="vm-card">
+                    <div class="vm-icon">
                         <i class="fas fa-eye"></i>
                     </div>
-                    <h3 id="missionCard1Title">Our Vision</h3>
-                    <p id="missionCard1Text">Provision of surgical treatment to children born with congenital anomalies and those who acquire trauma-related disabilities. We also facilitate necessary education to communities susceptible to certain congenital anomalies and support prevention by decreasing the incidence of trauma-related disabilities.</p>
+                    <h3 id="visionTitle">Our Vision</h3>
+                    <p id="visionText">Provision of surgical treatment to children born with congenital anomalies and those who acquire trauma-related disabilities. We also facilitate necessary education to communities susceptible to certain congenital anomalies and support prevention by decreasing the incidence of trauma-related disabilities.</p>
                 </div>
                 
-                <div class="mission-card">
-                    <div class="mission-icon">
+                <div class="vm-card">
+                    <div class="vm-icon">
                         <i class="fas fa-bullseye"></i>
                     </div>
-                    <h3 id="missionCard2Title">Our Mission</h3>
-                    <p id="missionCard2Text">Provision of quality health care services and education to rural areas through organized surgical camps and outreach programs in the regions.</p>
-                </div>
-                
-                <div class="mission-card">
-                    <div class="mission-icon">
-                        <i class="fas fa-flag-checkered"></i>
-                    </div>
-                    <h3 id="missionCard3Title">Our Objectives</h3>
-                    <p id="missionCard3Text">Enhancing society's awareness of available treatment options and modalities for various congenital anomalies and trauma-related disabilities. Advocating for prevention and protection measures to reduce the development of anomalies and trauma-related disabilities.</p>
+                    <h3 id="missionTitle">Our Mission</h3>
+                    <p id="missionText">Provision of quality health care services and education to rural areas through organized surgical camps and outreach programs in the regions.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Premium Values Section -->
-    <section class="premium-values" id="values">
+    <!-- Objectives Section -->
+    <section class="objectives-section" id="objectives">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="objectivesTitle">Our Objectives</h2>
+                <p id="objectivesSubtitle">The specific goals we work towards achieving every day</p>
+            </div>
+            
+            <div class="objectives-container">
+                <div class="objective-card">
+                    <div class="objective-number">01</div>
+                    <div class="objective-content">
+                        <h3 id="objective1Title">Enhancing Awareness</h3>
+                        <p id="objective1Text">Enhancing society's awareness of available treatment options and modalities for various congenital anomalies and trauma-related disabilities. We believe that informed communities are empowered communities.</p>
+                    </div>
+                </div>
+                
+                <div class="objective-card">
+                    <div class="objective-number">02</div>
+                    <div class="objective-content">
+                        <h3 id="objective2Title">Advocating Prevention</h3>
+                        <p id="objective2Text">Advocating for prevention and protection measures to reduce the development of anomalies and trauma-related disabilities. Our prevention programs focus on education, early intervention, and community engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section" id="values">
         <div class="container">
             <div class="section-header">
                 <h2 style="background: linear-gradient(135deg, #ffffff 0%, #f59e0b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" id="valuesTitle">Our Core Values</h2>
-                <p style="color: rgba(255, 255, 255, 0.9);" id="valuesSubtitle">The foundation of our organization's culture and work</p>
+                <p style="color: rgba(255, 255, 255, 0.9);" id="valuesSubtitle">The principles that guide every decision we make and every action we take</p>
             </div>
             
             <div class="values-container">
@@ -1133,7 +1005,7 @@
                         <i class="fas fa-user-shield"></i>
                     </div>
                     <h3 id="value1Title">Dignity</h3>
-                    <p id="value1Text">We respect every individual's humanity and inherent worth in all our interactions.</p>
+                    <p id="value1Text">We respect every individual's humanity and inherent worth, treating all with the respect they deserve as human beings.</p>
                 </div>
                 
                 <div class="value-card">
@@ -1141,7 +1013,7 @@
                         <i class="fas fa-balance-scale"></i>
                     </div>
                     <h3 id="value2Title">Equity</h3>
-                    <p id="value2Text">We believe in fair access to care and opportunities for all, regardless of background.</p>
+                    <p id="value2Text">We believe in fair access to care and opportunities for all, regardless of background, disability, or circumstances.</p>
                 </div>
                 
                 <div class="value-card">
@@ -1149,7 +1021,7 @@
                         <i class="fas fa-eye"></i>
                     </div>
                     <h3 id="value3Title">Transparency</h3>
-                    <p id="value3Text">We act with honesty, openness, and accountability in all our operations.</p>
+                    <p id="value3Text">We act with honesty, openness, and accountability in all our operations, building trust with communities and partners.</p>
                 </div>
                 
                 <div class="value-card">
@@ -1157,38 +1029,72 @@
                         <i class="fas fa-heart"></i>
                     </div>
                     <h3 id="value4Title">Compassion</h3>
-                    <p id="value4Text">We lead with empathy, kindness, and genuine care for every person we serve.</p>
+                    <p id="value4Text">We lead with empathy, kindness, and genuine care for every person we serve, understanding their unique challenges.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Premium CTA Section -->
-    <section class="premium-cta" id="cta">
+    <!-- History Section -->
+    <section class="history-section" id="history">
         <div class="container">
-            <div class="cta-container">
-                <h2 id="ctaTitle">Join Our Mission Today</h2>
-                <p id="ctaText">Your support enables us to reach more communities, provide more surgeries, and transform more lives across Tanzania's Lake Zone region. Together, we can build a more inclusive society.</p>
+            <div class="section-header">
+                <h2 id="historyTitle">Our History</h2>
+                <p id="historySubtitle">The journey of CAVITRD from humble beginnings to making a lasting impact</p>
+            </div>
+            
+            <div class="history-container">
+                <p id="historyIntro">CAVITRD began in Mwanza, where a group of caregivers, community leaders, and health workers saw how children with disabilities were being left behind. From a few small meetings and outreach sessions, we grew into a recognized organization.</p>
                 
-                <div class="cta-btns">
-                    <a href="contact.html#donate" class="btn btn-primary">
-                        <i class="fas fa-donate"></i>
-                        <span>Make a Donation</span>
-                    </a>
-                    <a href="contact.html#volunteer" class="btn btn-outline" style="color: var(--dark); border-color: var(--dark);">
-                        <i class="fas fa-hands-helping"></i>
-                        <span>Become a Volunteer</span>
-                    </a>
-                    <a href="contact.html#partner" class="btn btn-outline" style="color: var(--dark); border-color: var(--dark);">
-                        <i class="fas fa-handshake"></i>
-                        <span>Partner With Us</span>
-                    </a>
+                <div class="history-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year" id="year1">2017</div>
+                        <h3 id="event1Title">Foundation</h3>
+                        <p id="event1Text">CAVITRD was founded by a group of dedicated healthcare professionals and community leaders in Mwanza who recognized the urgent need for specialized care for children and adults with disabilities.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year" id="year2">2018</div>
+                        <h3 id="event2Title">Registration</h3>
+                        <p id="event2Text">Officially registered as a Tanzanian NGO with Registration number <strong>14NGO/R/4896</strong>, marking the beginning of our formal operations and expanded reach.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year" id="year3">2019</div>
+                        <h3 id="event3Title">First Surgical Camps</h3>
+                        <p id="event3Text">Conducted our first surgical outreach camps in remote Lake Zone communities, providing life-changing procedures to those who had no access to specialized healthcare.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year" id="year4">2023</div>
+                        <h3 id="event4Title">Expanded Reach</h3>
+                        <p id="event4Text">Our story continues with every village we reach, every family we support, and every child we help thrive. We have now impacted thousands of lives across the Lake Zone region.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Premium Footer -->
+    <!-- CTA Section -->
+    <section class="about-cta">
+        <div class="container">
+            <h2 id="ctaTitle">Join Our Journey</h2>
+            <p id="ctaText">From humble beginnings to making a lasting impact, our journey continues. Be part of our story as we work to transform more lives across Tanzania.</p>
+            
+            <div style="display: flex; gap: 25px; justify-content: center; flex-wrap: wrap;">
+                <a href="projects.html" class="btn btn-primary">
+                    <i class="fas fa-hands-helping"></i>
+                    <span>See Our Work</span>
+                </a>
+                <a href="contact.html" class="btn btn-outline" style="color: var(--dark); border-color: var(--dark);">
+                    <i class="fas fa-handshake"></i>
+                    <span>Partner With Us</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="premium-footer">
         <div class="container">
             <div class="footer-container">
@@ -1234,8 +1140,6 @@
                         <li><a href="projects.html#vision"><i class="fas fa-chevron-right"></i> Vision Care</a></li>
                         <li><a href="projects.html#education"><i class="fas fa-chevron-right"></i> Community Education</a></li>
                         <li><a href="projects.html#rehabilitation"><i class="fas fa-chevron-right"></i> Rehabilitation</a></li>
-                        <li><a href="projects.html#research"><i class="fas fa-chevron-right"></i> Research</a></li>
-                        <li><a href="projects.html#advocacy"><i class="fas fa-chevron-right"></i> Advocacy</a></li>
                     </ul>
                 </div>
                 
@@ -1292,45 +1196,10 @@
             }
         });
 
-        // Animated Counter
-        const animateCounters = () => {
-            const counters = document.querySelectorAll('.stat-number');
-            const speed = 200;
-
-            counters.forEach(counter => {
-                const animate = () => {
-                    const target = +counter.getAttribute('data-count');
-                    const count = +counter.innerText.replace(/,/g, '');
-                    const increment = target / speed;
-
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + increment).toLocaleString();
-                        setTimeout(animate, 20);
-                    } else {
-                        counter.innerText = target.toLocaleString();
-                    }
-                };
-
-                animate();
-            });
-        };
-
-        // Intersection Observer for Counters
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        observer.observe(document.getElementById('hero'));
-
         // Parallax Effect
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
-            const hero = document.getElementById('hero');
+            const hero = document.querySelector('.page-hero');
             if (hero) {
                 hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
             }
@@ -1338,46 +1207,56 @@
 
         // Language Switching System
         const englishContent = {
-            heroBadge: "Registered NGO Since 2017",
-            heroTitle: "Transforming Lives Through Compassionate Care",
-            heroText: "CAVITRD is a registered Tanzanian NGO (Registration No. <strong>14NGO/R/4896</strong>), dedicated to supporting children and adults with congenital or acquired anomalies, vision impairment, and trauma-related disabilities across the Lake Zone region.",
-            stat1: "Surgeries Supported",
-            stat2: "Communities Reached",
-            stat3: "Lives Transformed",
-            aboutTitle: "Our Commitment to Excellence",
-            aboutSubtitle: "Providing specialized care and support to those who need it most",
-            aboutText1: "We work with children and adults with congenital or acquired anomalies, vision impairments, and trauma-related disabilities. Our efforts focus on rural communities, especially across the Lake Zone region of Tanzania.",
-            feature1Title: "Surgical Outreach",
-            feature1Text: "Organized surgical camps providing life-changing procedures in remote areas.",
-            feature2Title: "Vision Care Services",
-            feature2Text: "Comprehensive vision impairment support including screening and treatment.",
-            feature3Title: "Community Education",
-            feature3Text: "Awareness programs on prevention and available treatment options.",
-            missionTitle: "Our Vision & Mission",
-            missionSubtitle: "The guiding principles that shape everything we do",
-            missionCard1Title: "Our Vision",
-            missionCard1Text: "Provision of surgical treatment to children born with congenital anomalies and those who acquire trauma-related disabilities. We also facilitate necessary education to communities susceptible to certain congenital anomalies and support prevention by decreasing the incidence of trauma-related disabilities.",
-            missionCard2Title: "Our Mission",
-            missionCard2Text: "Provision of quality health care services and education to rural areas through organized surgical camps and outreach programs in the regions.",
-            missionCard3Title: "Our Objectives",
-            missionCard3Text: "Enhancing society's awareness of available treatment options and modalities for various congenital anomalies and trauma-related disabilities. Advocating for prevention and protection measures to reduce the development of anomalies and trauma-related disabilities.",
+            pageTitle: "About CAVITRD",
+            pageSubtitle: "A registered Tanzanian NGO with Registration number <strong>14NGO/R/4896</strong>, dealing with children and adults with congenital or acquired anomalies, vision impairment, and trauma-related disabilities.",
+            aboutTitle: "Who We Are",
+            aboutText1: "<strong>CAVITRD</strong> is a registered Tanzanian NGO with Registration number <strong>14NGO/R/4896</strong>, dealing with children and adults with congenital or acquired anomalies, vision impairment, and trauma-related disabilities.",
+            aboutText2: "We work with children and adults with congenital or acquired anomalies, vision impairments, and trauma-related disabilities. Our efforts focus on rural communities, especially across the Lake Zone region of Tanzania.",
+            aboutText3: "Through organized surgical camps, community education, and comprehensive support services, we strive to create lasting positive change in the lives of those we serve.",
+            vmTitle: "Our Vision & Mission",
+            vmSubtitle: "The guiding principles that drive our work and define our purpose",
+            visionTitle: "Our Vision",
+            visionText: "Provision of surgical treatment to children born with congenital anomalies and those who acquire trauma-related disabilities. We also facilitate necessary education to communities susceptible to certain congenital anomalies and support prevention by decreasing the incidence of trauma-related disabilities.",
+            missionTitle: "Our Mission",
+            missionText: "Provision of quality health care services and education to rural areas through organized surgical camps and outreach programs in the regions.",
+            objectivesTitle: "Our Objectives",
+            objectivesSubtitle: "The specific goals we work towards achieving every day",
+            objective1Title: "Enhancing Awareness",
+            objective1Text: "Enhancing society's awareness of available treatment options and modalities for various congenital anomalies and trauma-related disabilities. We believe that informed communities are empowered communities.",
+            objective2Title: "Advocating Prevention",
+            objective2Text: "Advocating for prevention and protection measures to reduce the development of anomalies and trauma-related disabilities. Our prevention programs focus on education, early intervention, and community engagement.",
             valuesTitle: "Our Core Values",
-            valuesSubtitle: "The foundation of our organization's culture and work",
+            valuesSubtitle: "The principles that guide every decision we make and every action we take",
             value1Title: "Dignity",
-            value1Text: "We respect every individual's humanity and inherent worth in all our interactions.",
+            value1Text: "We respect every individual's humanity and inherent worth, treating all with the respect they deserve as human beings.",
             value2Title: "Equity",
-            value2Text: "We believe in fair access to care and opportunities for all, regardless of background.",
+            value2Text: "We believe in fair access to care and opportunities for all, regardless of background, disability, or circumstances.",
             value3Title: "Transparency",
-            value3Text: "We act with honesty, openness, and accountability in all our operations.",
+            value3Text: "We act with honesty, openness, and accountability in all our operations, building trust with communities and partners.",
             value4Title: "Compassion",
-            value4Text: "We lead with empathy, kindness, and genuine care for every person we serve.",
-            ctaTitle: "Join Our Mission Today",
-            ctaText: "Your support enables us to reach more communities, provide more surgeries, and transform more lives across Tanzania's Lake Zone region. Together, we can build a more inclusive society.",
+            value4Text: "We lead with empathy, kindness, and genuine care for every person we serve, understanding their unique challenges.",
+            historyTitle: "Our History",
+            historySubtitle: "The journey of CAVITRD from humble beginnings to making a lasting impact",
+            historyIntro: "CAVITRD began in Mwanza, where a group of caregivers, community leaders, and health workers saw how children with disabilities were being left behind. From a few small meetings and outreach sessions, we grew into a recognized organization.",
+            year1: "2017",
+            event1Title: "Foundation",
+            event1Text: "CAVITRD was founded by a group of dedicated healthcare professionals and community leaders in Mwanza who recognized the urgent need for specialized care for children and adults with disabilities.",
+            year2: "2018",
+            event2Title: "Registration",
+            event2Text: "Officially registered as a Tanzanian NGO with Registration number <strong>14NGO/R/4896</strong>, marking the beginning of our formal operations and expanded reach.",
+            year3: "2019",
+            event3Title: "First Surgical Camps",
+            event3Text: "Conducted our first surgical outreach camps in remote Lake Zone communities, providing life-changing procedures to those who had no access to specialized healthcare.",
+            year4: "2023",
+            event4Title: "Expanded Reach",
+            event4Text: "Our story continues with every village we reach, every family we support, and every child we help thrive. We have now impacted thousands of lives across the Lake Zone region.",
+            ctaTitle: "Join Our Journey",
+            ctaText: "From humble beginnings to making a lasting impact, our journey continues. Be part of our story as we work to transform more lives across Tanzania.",
             quickLinksTitle: "Quick Links",
             programsLinksTitle: "Our Programs",
             contactTitle: "Contact Us",
             contactAddress: "Mwanza, Tanzania<br>Lake Zone Region",
-            contactPhone: "Phone: +255 XXX XXX XXX",
+            contactPhone: "Phone: +255 718 851 139",
             contactEmail: "Email: info@cavitrd.org",
             contactReg: "Reg. No: 14NGO/R/4896",
             footerAbout: "A registered Tanzanian NGO (Registration No. <strong>14NGO/R/4896</strong>) dedicated to supporting children and adults with congenital or acquired anomalies, vision impairment, and trauma-related disabilities across the Lake Zone region.",
@@ -1385,46 +1264,56 @@
         };
 
         const swahiliContent = {
-            heroBadge: "AS Iliyosajiliwa Tangu 2017",
-            heroTitle: "Kubadilisha Maisha Kupitia Huduma ya Huruma",
-            heroText: "CAVITRD ni AS iliyosajiliwa Tanzania (Nambari ya Usajili <strong>14NGO/R/4896</strong>), inayojitolea kusaidia watoto na watu wazima wenye kasoro za kuzaliwa au zilizopatikana, utofu wa kuona, na ulemavu unaohusishwa na trauma katika eneo la Ziwa.",
-            stat1: "Upasuaji Uliotolewa",
-            stat2: "Jamii Zilizofikiwa",
-            stat3: "Maisha Yanayobadilishwa",
-            aboutTitle: "Ahadi Yetu ya Ubora",
-            aboutSubtitle: "Kutoa huduma maalum na usaidizi kwa wale wenye hitaji kubwa zaidi",
-            aboutText1: "Tunafanya kazi na watoto na watu wazima wenye kasoro za kuzaliwa au zilizopatikana, utofu wa kuona, na ulemavu unaohusishwa na trauma. Juhudi zetu zinalenga jamii za vijijini, hasa katika eneo la Ziwa la Tanzania.",
-            feature1Title: "Upasuaji wa Nje",
-            feature1Text: "Kambi za upasuaji zilizopangwa zinazotoa matibabu yanayobadilisha maisha katika maeneo ya mbali.",
-            feature2Title: "Huduma za Kuona",
-            feature2Text: "Usaidizi kamili wa utofu wa kuona ikiwa ni pamoja na uchunguzi na matibabu.",
-            feature3Title: "Elimu ya Jamii",
-            feature3Text: "Programu za uhamasishaji juu ya kuzuia na chaguzi za matibabu zinazopatikana.",
-            missionTitle: "Maono na Dhamira Yetu",
-            missionSubtitle: "Kanuni zinazoongoza kila kitu tunachofanya",
-            missionCard1Title: "Maono Yetu",
-            missionCard1Text: "Kutoa matibabu ya upasuaji kwa watoto waliozaliwa na kasoro za kuzaliwa na wale wanaopata ulemavu unaohusishwa na trauma. Pia tunarahisisha elimu muhimu kwa jamii zinazoweza kupata kasoro fulani za kuzaliwa na kusaidia kuzuia kwa kupunguza matukio ya ulemavu unaohusishwa na trauma.",
-            missionCard2Title: "Dhamira Yetu",
-            missionCard2Text: "Kutoa huduma bora za afya na elimu maeneo ya vijijini kupitia kambi za upasuaji zilizopangwa na programu za ufikiaji katika mikoa.",
-            missionCard3Title: "Malengo Yetu",
-            missionCard3Text: "Kuongeza ufahamu wa jamii kuhusu chaguzi na njia za matibabu zinazopatikana kwa kasoro mbalimbali za kuzaliwa na ulemavu unaohusishwa na trauma. Kutetea hatua za kuzuia na kulinda ili kupunguza ukuzaji wa kasoro na ulemavu unaohusishwa na trauma.",
+            pageTitle: "Kuhusu CAVITRD",
+            pageSubtitle: "AS iliyosajiliwa Tanzania yenye Nambari ya Usajili <strong>14NGO/R/4896</strong>, inayoshughulikia watoto na watu wazima wenye kasoro za kuzaliwa au zilizopatikana, utofu wa kuona, na ulemavu unaohusishwa na trauma.",
+            aboutTitle: "Sisi Ni Nani",
+            aboutText1: "<strong>CAVITRD</strong> ni AS iliyosajiliwa Tanzania yenye Nambari ya Usajili <strong>14NGO/R/4896</strong>, inayoshughulikia watoto na watu wazima wenye kasoro za kuzaliwa au zilizopatikana, utofu wa kuona, na ulemavu unaohusishwa na trauma.",
+            aboutText2: "Tunafanya kazi na watoto na watu wazima wenye kasoro za kuzaliwa au zilizopatikana, utofu wa kuona, na ulemavu unaohusishwa na trauma. Juhudi zetu zinalenga jamii za vijijini, hasa katika eneo la Ziwa la Tanzania.",
+            aboutText3: "Kupitia kambi za upasuaji zilizopangwa, elimu ya jamii, na huduma kamili za usaidizi, tunajitahidi kuunda mabadiliko chanya ya kudumu katika maisha ya wale tunawahudumia.",
+            vmTitle: "Maono na Dhamira Yetu",
+            vmSubtitle: "Kanuni zinazoongoza kazi yetu na kufafanua kusudi letu",
+            visionTitle: "Maono Yetu",
+            visionText: "Kutoa matibabu ya upasuaji kwa watoto waliozaliwa na kasoro za kuzaliwa na wale wanaopata ulemavu unaohusishwa na trauma. Pia tunarahisisha elimu muhimu kwa jamii zinazoweza kupata kasoro fulani za kuzaliwa na kusaidia kuzuia kwa kupunguza matukio ya ulemavu unaohusishwa na trauma.",
+            missionTitle: "Dhamira Yetu",
+            missionText: "Kutoa huduma bora za afya na elimu maeneo ya vijijini kupitia kambi za upasuaji zilizopangwa na programu za ufikiaji katika mikoa.",
+            objectivesTitle: "Malengo Yetu",
+            objectivesSubtitle: "Malengo mahususi tunayofanya kazi kuyafikia kila siku",
+            objective1Title: "Kuongeza Ufahamu",
+            objective1Text: "Kuongeza ufahamu wa jamii kuhusu chaguzi na njia za matibabu zinazopatikana kwa kasoro mbalimbali za kuzaliwa na ulemavu unaohusishwa na trauma. Tunaamini kwamba jamii zilizo na taarifa ni jamii zilizo wezeshwa.",
+            objective2Title: "Kutetea Kuzuia",
+            objective2Text: "Kutetea hatua za kuzuia na kulinda ili kupunguza ukuzaji wa kasoro na ulemavu unaohusishwa na trauma. Programu zetu za kuzuia zinazingatia elimu, kuingilia kati mapema, na ushiriki wa jamii.",
             valuesTitle: "Maadili Yetu ya Msingi",
-            valuesSubtitle: "Msingi wa utamaduni na kazi ya shirika letu",
+            valuesSubtitle: "Kanuni zinazoongoza kila uamuzi tunaufanya na kila hatua tunayochukua",
             value1Title: "Heshima",
-            value1Text: "Tunaheshimu utu wa kila mtu na thamani yake ya asili katika mwingiliano wote wetu.",
+            value1Text: "Tunaheshimu utu wa kila mtu na thamani yake ya asili, tukiwatendea wote kwa heshima wanayostahili kama binadamu.",
             value2Title: "Usawa",
-            value2Text: "Tunaamini katika ufikiaji wa haki wa huduma na fursa kwa wote, bila kujali asili.",
+            value2Text: "Tunaamini katika ufikiaji wa haki wa huduma na fursa kwa wote, bila kujali asili, ulemavu, au hali.",
             value3Title: "Uwazi",
-            value3Text: "Tunatenda kwa uaminifu, uwazi, na uwajibikaji katika shughuli zote.",
+            value3Text: "Tunatenda kwa uaminifu, uwazi, na uwajibikaji katika shughuli zote, tukijenga uaminifu na jamii na washirika.",
             value4Title: "Huruma",
-            value4Text: "Tunaongoza kwa huruma, wema, na huduma ya kweli kwa kila mtu tunayemhudumia.",
-            ctaTitle: "Jiunge na Dhamira Yetu Leo",
-            ctaText: "Usaidizi wako unatuwezesha kufikia jamii zaidi, kutoa upasuaji zaidi, na kubadilisha maisha zaidi katika eneo la Ziwa la Tanzania. Pamoja, tunaweza kujenga jamii yenye kujumuisha zaidi.",
+            value4Text: "Tunaongoza kwa huruma, wema, na huduma ya kweli kwa kila mtu tunayemhudumia, tukielewa changamoto zao za kipekee.",
+            historyTitle: "Historia Yetu",
+            historySubtitle: "Safari ya CAVITRD kutoka mwanzo mdogo hadi kufanya athari ya kudumu",
+            historyIntro: "CAVITRD ilianzia Mwanza, ambapo kundi la walezi, viongozi wa jamii, na wafanyikazi wa afya waliona jinsi watoto wenye ulemavu walikuwa wakiwaachwa nyuma. Kutoka kwenye mikutano michache na vikao vya ufikiaji, tulikua kuwa shirika linalotambuliwa.",
+            year1: "2017",
+            event1Title: "Msingi",
+            event1Text: "CAVITRD ilianzishwa na kundi la wataalamu wa afya waliojitolea na viongozi wa jamii huko Mwanza ambao walitambua hitaji la dharura la huduma maalum kwa watoto na watu wazima wenye ulemavu.",
+            year2: "2018",
+            event2Title: "Usajili",
+            event2Text: "Kusajiliwa rasmi kama AS ya Tanzania yenye Nambari ya Usajili <strong>14NGO/R/4896</strong>, ikionyesha mwanzo wa shughuli zetu rasmi na ufikiaji uliopanuliwa.",
+            year3: "2019",
+            event3Title: "Kambi za Kwanza za Upasuaji",
+            event3Text: "Tulifanya kambi zetu za kwanza za upasuaji wa nje katika jamii za mbali za Eneo la Ziwa, tukitoa matibabu yanayobadilisha maisha kwa wale ambao hawakuwa na ufikiaji wa huduma maalum za afya.",
+            year4: "2023",
+            event4Title: "Ufikiaji Ulioongezeka",
+            event4Text: "Hadithi yetu inaendelea na kila kijiji tunachokifikia, kila familia tunayowasaidia, na kila mtoto tunayomsaidia kustawi. Sasa tumebadilisha maisha ya maelfu katika eneo la Ziwa.",
+            ctaTitle: "Jiunge na Safari Yetu",
+            ctaText: "Kutoka mwanzo mdogo hadi kufanya athari ya kudumu, safari yetu inaendelea. Kuwa sehemu ya hadithi yetu tunapofanya kazi kubadilisha maisha zaidi nchini Tanzania.",
             quickLinksTitle: "Viungo vya Haraka",
             programsLinksTitle: "Programu Zetu",
             contactTitle: "Wasiliana Nasi",
             contactAddress: "Mwanza, Tanzania<br>Eneo la Ziwa",
-            contactPhone: "Simu: +255 XXX XXX XXX",
+            contactPhone: "Simu: +255 718 851 139",
             contactEmail: "Barua pepe: info@cavitrd.org",
             contactReg: "Nambari ya Usajili: 14NGO/R/4896",
             footerAbout: "AS iliyosajiliwa Tanzania (Nambari ya Usajili <strong>14NGO/R/4896</strong>) inayojitolea kusaidia watoto na watu wazima wenye kasoro za kuzaliwa au zilizopatikana, utofu wa kuona, na ulemavu unaohusishwa na trauma katika eneo la Ziwa.",
@@ -1478,9 +1367,6 @@
                 }
             });
         });
-
-        // Initialize counters on page load
-        animateCounters();
     </script>
 </body>
 </html>
